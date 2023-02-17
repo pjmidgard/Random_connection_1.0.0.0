@@ -181,33 +181,22 @@ class encypthion_class:
          
                                         
                                 long=len(size_data2)
-                                        #print(long)
-                                        
-                                        
-                                        #print(long)
-                                       
-                                       
+                                 
                                 block=0
                                 Times=-4
                                 Times2=-4
-                                                    
-                                
-                                        
+                                  
                                 blocks=80
-                                        #print(blocks)
-                                        
+                                        #print(blocks)      
                                 Calculus=""
                                 Number_Times=""
                                     
-                                        
                                 while block<long:
                                             Calculus=size_data2[block:block+blocks]
                                             block+=blocks
                                             
                                             block=block+blocks
-                                         
-                                            
-                      
+                                     
                                             while Times!=76:
                                                        Times+=4
                                                        Times2=-4
@@ -215,54 +204,10 @@ class encypthion_class:
                                                        while Times2!=76:
                                                                    Times2+=4
 
-
-                                                                
                                                                    if Times>0 and Times2>0 and Calculus[Times:Times+4]==Calculus[Times2:Times2+4] and Times2!=Times and Times!=Times2:
                                                                    	  Number_Times=(Times2//4)-(Times//4)-1
                                                                    	  print(Number_Times)
-                                                                    
-                                                                
 
-
-                                                                         
-                                                                
-                                                                            
-
-
-                                                    
-            
-                                        
-
-
-                                                                
-                                                                        
-                                                                         
-                                                                        
-                                                                        
-                                        
-                                                                   
-                                                                       
-                                                        
-                                        
-                                        
-                                                                       
-                                        
-                                        
-                
-
-                                         
-                              
-                                     
-                                            
-                                        
-                                        
-                                        
-                                                                       
-                                    
-                
-                                
-                               
-                                    
                                 size_data11=size_data12
                                 
                                 
