@@ -183,19 +183,25 @@ class encypthion_class:
                                 long=len(size_data2)
                                  
                                 block=0
-                                Times=-4
-                                Times2=-4
+                                
                                   
                                 blocks=80
                                         #print(blocks)      
                                 Calculus=""
                                 Number_Times=""
+                                Count_blocks=0
                                     
                                 while block<long:
                                             Calculus=size_data2[block:block+blocks]
+
+                                            
                                             block+=blocks
                                             
                                             block=block+blocks
+
+                                            Times=-4
+                                            Times2=-4
+                                            Count_blocks+=1
                                      
                                             while Times!=76:
                                                        Times+=4
@@ -206,7 +212,10 @@ class encypthion_class:
 
                                                                    if Times>0 and Times2>0 and Calculus[Times:Times+4]==Calculus[Times2:Times2+4] and Times2!=Times and Times!=Times2:
                                                                    	  Number_Times=(Times2//4)-(Times//4)-1
-                                                                   	  print(Number_Times)
+                                                                   	  if Number_Times>0 and Number_Times<=7:
+                                                                              Number_Times2=Number_Times
+                                                                              
+                                                                   	  
 
                                 size_data11=size_data12
                                 
