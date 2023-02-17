@@ -197,6 +197,7 @@ class encypthion_class:
                                         #print(blocks)
                                         
                                 Calculus=""
+                                Number_Times=""
                                     
                                         
                                 while block<long:
@@ -216,8 +217,10 @@ class encypthion_class:
 
 
                                                                 
-                                                                   if Calculus[Times:Times+4]==Calculus[Times2:Times2+4] and Times2!=Times and Times!=Times2:
-                                                                   	  print(Calculus)
+                                                                   if Times>0 and Times2>0 and Calculus[Times:Times+4]==Calculus[Times2:Times2+4] and Times2!=Times and Times!=Times2:
+                                                                   	  Number_Times=(Times2//4)-(Times//4)-1
+                                                                   	  print(Number_Times)
+                                                                    
                                                                 
 
 
