@@ -171,45 +171,95 @@ class encypthion_class:
 
                                     lenf3=len(size_data2)
                                 lenf2=len(size_data2)
-                                block=0
-                                blocks=160
+                                
+                                
+                                size_data12=""
+                                Times=""
+                                
+
+                                size_data11=""
+         
                                         
                                 long=len(size_data2)
-                                print(long)
+                                        #print(long)
                                         
+                                        
+                                        #print(long)
+                                       
+                                       
+                                block=0
+                                Times=-4
+                                Times2=-4
+                                                    
+                                
+                                        
+                                blocks=80
+                                        #print(blocks)
+                                        
+                                Calculus=""
+                                    
                                         
                                 while block<long:
                                             Calculus=size_data2[block:block+blocks]
-                                            
                                             block+=blocks
-                                            Save_01=""
-                                            Save_02=""
-                                            Save_03=""
                                             
+                                            block=block+blocks
+                                         
                                             
-                                            #if compress 1
-                                            
-                                            
-                                            #if compress 0 not compress
-                                            
-                                            if Save_01==Calculus.find("1", 0, 80):
-                                               
-                                               if Save_02==Calculus.find(Save_01, Save_01, 80):
-                                                  
-                                                  if Save_03!=Calculus.find(Save_02, Save_01+8, 80):
-                                                  
-                                                     if (Save_02//4)-1!=(Save_01//4):
-                                                        print(Calculus)
-                                               
-                                            
-                                           
-                                            
+                      
+                                            while Times!=76:
+                                                       Times+=4
+                                                       Times2=-4
+                                                
+                                                       while Times2!=76:
+                                                                   Times2+=4
+
+
+                                                                
+                                                                   if Calculus[Times:Times+4]==Calculus[Times2:Times2+4] and Times2!=Times and Times!=Times2:
+                                                                   	  print(Calculus)
+                                                                
+
+
+                                                                         
+                                                                
+                                                                            
+
+
+                                                    
+            
+                                        
+
+
+                                                                
+                                                                        
+                                                                         
+                                                                        
+                                                                        
+                                        
+                                                                   
+                                                                       
+                                                        
+                                        
+                                        
+                                                                       
+                                        
+                                        
+                
 
                                          
                               
-
-                                size_data11=""  
-                                size_data12=""
+                                     
+                                            
+                                        
+                                        
+                                        
+                                                                       
+                                    
+                
+                                
+                               
+                                    
                                 size_data11=size_data12
                                 
                                 
@@ -454,249 +504,41 @@ class encypthion_class:
                                     
                                     
                                     
-                                size_data11=""
-                                size_data12=""
-                                long21=len(size_data3)
-                                limit1=0
-                                size_data4="'"
-                                
-                                Times_of_times=0
-                                
-                                
-
-                                
-                                while limit1!=1:    
-                                
-                                    size_data4=size_data2
-                                    long_B=len(size_data4)
-                                    long=len(size_data4)
-                                    Times_of_times+=1
-                                    if Times_of_times==100:
-                                        limit1
-                                        
+                                    size_data11=""
+                                    size_data12=""
+                                    size_data11=size_data12
                                     
                                     
-                                        
-                                    
-                                    info_hex=size_data4
-                                    times10=0 
-                                    limit=0
-                                   
-                                    
-                                    while times10!=1:
-                                        
-
-                                        
-                                        
-                                        
-                                    
-                                    
-                                        size_data3=info_hex
-
-                                       
-                                        
-                                        long=len(size_data3)
-                                        #print(long)
-                                        
-                                        
-                                        #print(long)
-                                       
-                                       
-                                        block=0
-                                        
-                                       
-                                        #print(blocks)
-                                        
-                                        Calculus=""
-                                        Caculus_oct=0
-                                        res=""
-                                        res3=0
-                                        res6=""
-                                        file=0
-                                        resf=0
-                                        times_compress=0
-                                       
-
-                                        
-        
-                                        res_one_time=0
-                                        
-                                        while block<long:
-                                            
-                                            Combination=-1
-                                            Combination1=-1
-                                            
-                                        
-                                            times_compress+=1
-                                            
-                                            if file==0:
-                                                    
-                                                
-                                                #print(long2)
-                                                block2=0
-                                                blocks2=0
-                                                Times=-4
-                                                Times2=-4
-                                                Times3=-4
-                                                
-                                                res1=0
-                                                res2=0
-                                                res3=0
-                                                res5=1
-                                                limit_find=0
-                                                Combination5=0
-                                               
-                                                Combination1=-1
-                                                
-                                                Combination3=""
-                                              
-                                               
-                                                Calculus=size_data3[block:block+1]
-                                                if Calculus[0:1]=="1":
-                                                    Calculus=size_data3[block:block+49]
-                                                    block+=49
-                                                    Calculus=Calculus[1:]
-                                                    long2=len(Calculus)
-                                                    
-                                                if Calculus[0:1]=="0":
-                                                    
-                                                    Calculus=size_data3[block:block+46]
-                                                    long2=len(Calculus)
-                                                    block+=46
-                                                    
-                                                    Calculus=Calculus[1:]
-                                                    
-                                                  
-                                                    while Combination5!=1:
-
-
-                                                        if Combination==(2**48)-1:
-                                                            Combination5=1
-
-
-                                                        if Combination1==(2**46)-1:
-                                                            Combination5=1
-
-
-
-
-                                                        Times=-4
-                                                        Times2=-4
-                                                        Times3=-4
-                                                       
-
-                                                        Combination+=1
-                                                       
-                                                        Combination2=format(Combination,'048b')
-
-                                                        res1=0
-                                                        res10=0
-
-
-                                                        
-
-                                                        while Times3!=44:
-                                                                    Times3+=4
-                                                                    Times2=-4
-                                                                    Times=-4
-
-                                                                    while Times!=44:
-                                                                        Times+=4
-                                                                        Times2=-4
-
-                                                                        while Times2!=44:
-                                                                            Times2+=4
-                                                                           
-
-                                                                            if Combination2[Times:Times+4]==Combination2[Times2:Times2+4] and Combination2[Times:Times+4]==Combination2[Times3:Times3+4] and  Combination1<=(2**46) and res10==0 and  Times2!=Times and Times!=Times2 and Times!=Times3  and Times<=Times2+8 and Times2<=Times3+8 and Times+8>=Times2 and Times2+8>=Times3:
-                                                                                Combination1+=1
-                                                                                Combination3=format(Combination1,'046b')
-                              
-                                                                                res10=1
-                                                                                
-                                                                                
-                                                                                if Combination3==Calculus:
-                                            
-                                                                                   Calculus=Combination2
-                                                                                   res5=0
-                                                   
-             
-
-                            
-                                                                                
-       
-
-
-
-
-
-                                                                           
-
-
-
-
-
-                                               
-
-                                                if res5==1:              
-                                                    res+=res12
-                                                    resf+=1
-                                                else:
-                                                    res12=Calculus 
-                                                    res+=res12                                      
-                                          
-                                        times10+=1
-                                       
-                                            
-                                        info_hex=res 
-                                        long_after_compression=len(info_hex)
-                                        if long==long_after_compression:
-                                            limit=1
-                                            limit1=1
-
-                                        info_hex=res
-                                            
-                                    encypthion=info_hex
-                                    
-                                    size_data14=""
-                                                              
-                                    size_data12=encypthion
-
-                                    long21=len(size_data12)
-                                  
-                                    limit1=1
-                                
-                                size_data11=size_data12
                                 
                                 
                                                                                 
-                                n = int(size_data11, 2)
+                                    n = int(size_data11, 2)
                                 
-                                qqwslenf=len(size_data11)
-                                qqwslenf=(qqwslenf/8)*2
-                                qqwslenf=str(qqwslenf)
-                                qqwslenf="%0"+qqwslenf+"x"
+                                    qqwslenf=len(size_data11)
+                                    qqwslenf=(qqwslenf/8)*2
+                                    qqwslenf=str(qqwslenf)
+                                    qqwslenf="%0"+qqwslenf+"x"
                              
-                                jl=binascii.unhexlify(qqwslenf % n)
+                                    jl=binascii.unhexlify(qqwslenf % n)
                                 
-                                size_after=len(jl)
+                                    size_after=len(jl)
 
-                                size_after=len(jl)
+                                    size_after=len(jl)
                                 
                                    
-                                qqqwz=qqqwz+1
-                                szxzzza=""
-                                szxzs=""
+                                    qqqwz=qqqwz+1
+                                    szxzzza=""
+                                    szxzs=""
                             
-                                assxw=assxw+1
-                                if assxw==1:
-                                    assx=10
-                                    if assx==10:
+                                    assxw=assxw+1
+                                    if assxw==1:
+                                       assx=10
+                                       if assx==10:
 
-                                        f2.write(jl)
-                                        x2 = time()
-                                        x3=x2-x
-                                        return print(x3)
+                                          f2.write(jl)
+                                          x2 = time()
+                                          x3=x2-x
+                                          return print(x3)
 self=""                                
 d=encypthion_class()
     
