@@ -189,7 +189,8 @@ class encypthion_class:
                                         #print(blocks)      
                                 Calculus=""
                                 Number_Times=""
-                                Count_blocks=0
+                                count_block=0
+                                
                                     
                                 while block<long:
                                             Calculus=size_data2[block:block+blocks]
@@ -201,7 +202,15 @@ class encypthion_class:
 
                                             Times=-4
                                             Times2=-4
-                                            Count_blocks+=1
+                                            
+                                            compress=0
+                                            compress2=0
+                                            compress3=0
+                                            save_00=""
+                                            save_01=""
+                                            save_03=""
+                                            save_04=""
+                                            
                                      
                                             while Times!=76:
                                                        Times+=4
@@ -210,11 +219,52 @@ class encypthion_class:
                                                        while Times2!=76:
                                                                    Times2+=4
 
-                                                                   if Times>0 and Times2>0 and Calculus[Times:Times+4]==Calculus[Times2:Times2+4] and Times2!=Times and Times!=Times2:
-                                                                   	  Number_Times=(Times2//4)-(Times//4)-1
-                                                                   	  if Number_Times>0 and Number_Times<=7:
-                                                                              Number_Times2=Number_Times
-                                                                              
+                                                                   if Times>=0 and Times2>=0 and Calculus[Times:Times+4]==Calculus[Times2:Times2+4] and Times2!=Times and Times!=Times2:
+                                                                       Number_Times=((Times//4)-(Times2//4))-1
+                                                                       if Number_Times>0 and Number_Times<=7:
+                                                                           #print(Number_Times)
+                                                                           compress=1
+                                                                           save_01="0"+Calculus[Times:Times+4]+Calculus[Times2:Times2+3]+Calculus[Times2+4:]
+                                                                           
+                                                                       
+                                            if  compress==1 and Number_Times>0 and Number_Times<=7:
+                                            
+
+                                                Times=-4
+                                                Times2=-4
+                                                
+                                                compress=0
+                                                compress2=1
+
+                                            elif  compress==0 and Number_Times>7:
+                                                compress2=0
+                                                save_00="1"+Calculus
+                                                
+                                         
+                                            while Times!=76:
+                                                  Times+=4
+                                                  Times2=-4
+                                                    
+                                                  while Times2!=76:
+                                                        Times2+=4
+
+                                                        if Times>=0 and Times2>=0 and Calculus[Times:Times+4]==Calculus[Times2:Times2+4] and Times2!=Times and Times!=Times2:
+                                                           Number_Times=((Times//4)-(Times2//4))-1
+                                                           if Number_Times>0 and Number_Times<=7 and compress2==1:
+                                                                            
+                                                              compress=1
+                                                              compress3=1
+                                                              save_03=save_01+Calculus[Times:Times+4]+Calculus[Times2:Times2+3]+Calculus[Times2+4:]
+                                            if  compress3==1 and Number_Times>0 and Number_Times<=7:
+                                                   
+                                                save_04=save_03
+                                                size_data12=size_data12+save_04
+                                            elif  compress3==0 and Number_Times>7 and compress2==0:
+                                                save_04=save_00+Calculus
+                                                size_data12=size_data12+save_04
+
+                                            
+                                                
                                                                    	  
 
                                 size_data11=size_data12
