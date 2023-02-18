@@ -288,13 +288,13 @@ class encypthion_class:
                                                                             
                                                                               
                                                                           
-                                                if Number_Times2>0 and Number_Times2<=7 and compress2==1:
+                                                if Number_Times2>0 and Number_Times2<=7 and compress3==1:
                                                     save_04=save_03
                                                     size_data12=size_data12+save_04
                                                     #print(len(save_04))
                                                 
                                                     
-                                                elif  Number_Times2>7 or compress2!=1:
+                                                elif  Number_Times2>7 or compress3!=1:
                                                     save_04="1"+Calculus
                                             
                                                     size_data12=size_data12+save_04
