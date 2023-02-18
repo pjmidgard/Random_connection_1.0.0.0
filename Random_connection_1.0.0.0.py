@@ -204,6 +204,8 @@ class encypthion_class:
 
                                                 Times=-4
                                                 Times2=-4
+                                                Times3=76
+                                                Times4=76
 
                                                
                                                 
