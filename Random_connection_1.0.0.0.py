@@ -200,7 +200,7 @@ class encypthion_class:
                                                 
                                                 block+=blocks
                                                 
-                                                block=block+blocks
+                                                
 
                                                 Times=-4
                                                 Times2=-4
@@ -217,6 +217,7 @@ class encypthion_class:
                                                 save_03=""
                                                 save_04=""
                                                 Check=0
+                                                Number_Times2=-1
                                                 
                                          
                                                 while Times!=76:
@@ -248,12 +249,16 @@ class encypthion_class:
                                                     
                                                      compress=0
                                                      compress2=1
+                                                     
 
-                                                elif  compress==0 or Number_Times>7 or Check==0 or Check!=1:
+                                                elif  Number_Times>7 or Check!=1:
                                                     compress2=0
-                                                    save_00="1"+Calculus
+                                                   
                                                     
-                                             
+                                        
+                                                    
+                                                Times3=76
+                                                Times4=76
                                                 while Times3!=156:
                                                       Times3+=4
                                                       Times4=76
@@ -261,23 +266,25 @@ class encypthion_class:
                                                       while Times4!=156:
                                                             Times4+=4
 
-                                                            if Times>=80 and Times2>=80 and Calculus[Times3:Times3+4]==Calculus[Times4:Times4+4] and Times2!=Times and Times!=Times2:
-                                                               Number_Times2=(((Times3//4)-(Times4//4))-1)-80
-                                                               if Number_Times>0 and Number_Times<=7 and compress2==1:
+                                                            if Times3>=80 and Times4>=80 and Calculus[Times3:Times3+4]==Calculus[Times4:Times4+4] and Times4!=Times3:
+                                                               Number_Times2=(((Times3//4)-(Times4//4))-1)
+                                                               if Number_Times2>0 and Number_Times2<=7 and compress2==1:
                                                                    Equal_Not_compress2=format(Number_Times2,'04b')
                                                                    if Calculus[Times4:Times4]!=Equal_Not_compress2:
                                                                       Check=2 
                                                                                 
                                                                       compress=1
                                                                       compress3=1
-                                                                      save_03=save_01+Calculus[Times:Times+4]+Calculus[Times2:Times2+3]+Calculus[Times2+4:]
-                                                if  compress3==1 and Number_Times2>0 and Number_Times<=7 and Check==2 and Check==1:
-                                                       
+                                                                      save_03=save_01+Calculus[Times3:Times3+4]+Calculus[Times4:Times4+3]+Calculus[Times4+4:]
+                                                if Number_Times2>0 and Number_Times2<=7 and compress2==1:
                                                     save_04=save_03
                                                     size_data12=size_data12+save_04
-                                                elif  compress3==0 or Number_Times2>7 or compress2==0 or Check!=1 or Check!=2:
-                                                    save_04=save_00+Calculus
+                                                
+                                                    
+                                                elif  Number_Times2>7 or compress2!=1:
+                                                    save_04="1"+Calculus
                                                     size_data12=size_data12+save_04
+                                                    
                                                     
 
                                                 
