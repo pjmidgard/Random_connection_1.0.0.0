@@ -180,97 +180,112 @@ class encypthion_class:
                                 size_data11=""
          
                                         
-                                long=len(size_data2)
+                                
                                  
                                 block=0
                                 
+                                
                                   
-                                blocks=80
+                                blocks=160
                                         #print(blocks)      
                                 Calculus=""
-                                Number_Times=""
-                                count_block=0
+                                
+                                
                                 
                                     
                                 while block<long:
-                                            Calculus=size_data2[block:block+blocks]
+                                                long=len(size_data2)
+                                                Calculus=size_data2[block:block+blocks]
 
-                                            
-                                            block+=blocks
-                                            
-                                            block=block+blocks
-
-                                            Times=-4
-                                            Times2=-4
-                                            
-                                            compress=0
-                                            compress2=0
-                                            compress3=0
-                                            save_00=""
-                                            save_01=""
-                                            save_03=""
-                                            save_04=""
-                                            
-                                     
-                                            while Times!=76:
-                                                       Times+=4
-                                                       Times2=-4
                                                 
-                                                       while Times2!=76:
-                                                                   Times2+=4
-
-                                                                   if Times>=0 and Times2>=0 and Calculus[Times:Times+4]==Calculus[Times2:Times2+4] and Times2!=Times and Times!=Times2:
-                                                                       Number_Times=((Times//4)-(Times2//4))-1
-                                                                       if Number_Times>0 and Number_Times<=7:
-                                                                           #print(Number_Times)
-                                                                           compress=1
-                                                                           save_01="0"+Calculus[Times:Times+4]+Calculus[Times2:Times2+3]+Calculus[Times2+4:]
-                                                                           
-                                                                       
-                                            if  compress==1 and Number_Times>0 and Number_Times<=7:
-                                            
+                                                block+=blocks
+                                                
+                                                block=block+blocks
 
                                                 Times=-4
                                                 Times2=-4
+
+                                               
                                                 
                                                 compress=0
-                                                compress2=1
-
-                                            elif  compress==0 and Number_Times>7:
                                                 compress2=0
-                                                save_00="1"+Calculus
+                                                compress3=0
+                                                save_00=""
+                                                save_01=""
+                                                save_03=""
+                                                save_04=""
+                                                Check=0
                                                 
                                          
-                                            while Times!=76:
-                                                  Times+=4
-                                                  Times2=-4
+                                                while Times!=76:
+                                                           Times+=4
+                                                           Times2=-4
                                                     
-                                                  while Times2!=76:
-                                                        Times2+=4
+                                                           while Times2!=76:
+                                                                       Times2+=4
 
-                                                        if Times>=0 and Times2>=0 and Calculus[Times:Times+4]==Calculus[Times2:Times2+4] and Times2!=Times and Times!=Times2:
-                                                           Number_Times=((Times//4)-(Times2//4))-1
-                                                           if Number_Times>0 and Number_Times<=7 and compress2==1:
-                                                                            
-                                                              compress=1
-                                                              compress3=1
-                                                              save_03=save_01+Calculus[Times:Times+4]+Calculus[Times2:Times2+3]+Calculus[Times2+4:]
-                                            if  compress3==1 and Number_Times>0 and Number_Times<=7:
-                                                   
-                                                save_04=save_03
-                                                size_data12=size_data12+save_04
-                                            elif  compress3==0 and Number_Times>7 and compress2==0:
-                                                save_04=save_00+Calculus
-                                                size_data12=size_data12+save_04
-
-                                            
+                                                                       if Times>=0 and Times2>=0 and Calculus[Times:Times+4]==Calculus[Times2:Times2+4] and Times2!=Times and Times!=Times2:
+                                                                           Number_Times=((Times//4)-(Times2//4))-1
+                                                                         
+                                                                           
+                                                                           if Number_Times>0 and Number_Times<=7:
+                                                                               Equal_Not_compress=format(Number_Times,'04b')
+                                                                               if Calculus[Times:Times+4]!=Equal_Not_compress:
+                                                                               #print(Number_Times)
+                                                                                   compress=1
+                                                                                   Check=1
+                                                                                   
+                                                                                   save_01="0"+Calculus[Times:Times+4]+Calculus[Times2:Times2+3]+Calculus[Times2+4:]
+                                                                               
+                                                                           
+                                                if  compress==1 and Number_Times>0 and Number_Times<=7 and Check==1:
                                                 
-                                                                   	  
 
-                                size_data11=size_data12
+                                                     Times3=76
+                                                     Times4=76
+                                                    
+                                                     compress=0
+                                                     compress2=1
+
+                                                elif  compress==0 or Number_Times>7 or Check==0 or Check!=1:
+                                                    compress2=0
+                                                    save_00="1"+Calculus
+                                                    
+                                             
+                                                while Times3!=156:
+                                                      Times3+=4
+                                                      Times4=76
+                                                        
+                                                      while Times4!=156:
+                                                            Times4+=4
+
+                                                            if Times>=80 and Times2>=80 and Calculus[Times3:Times3+4]==Calculus[Times4:Times4+4] and Times2!=Times and Times!=Times2:
+                                                               Number_Times2=(((Times3//4)-(Times4//4))-1)-80
+                                                               if Number_Times>0 and Number_Times<=7 and compress2==1:
+                                                                   Equal_Not_compress2=format(Number_Times2,'04b')
+                                                                   if Calculus[Times4:Times4]!=Equal_Not_compress2:
+                                                                      Check=2 
+                                                                                
+                                                                      compress=1
+                                                                      compress3=1
+                                                                      save_03=save_01+Calculus[Times:Times+4]+Calculus[Times2:Times2+3]+Calculus[Times2+4:]
+                                                if  compress3==1 and Number_Times2>0 and Number_Times<=7 and Check==2 and Check==1:
+                                                       
+                                                    save_04=save_03
+                                                    size_data12=size_data12+save_04
+                                                elif  compress3==0 or Number_Times2>7 or compress2==0 or Check!=1 or Check!=2:
+                                                    save_04=save_00+Calculus
+                                                    size_data12=size_data12+save_04
+                                                    
+
+                                                
+                                                    
+                                                                              
                                 
                                 
-                                size_data11="1"+size_data11
+                                
+                                
+                                size_data11="1"+size_data12
                                 
                                 lenf=len(size_data11)
                                             
@@ -304,17 +319,6 @@ class encypthion_class:
                              
                                 jl=binascii.unhexlify(qqwslenf % n)
                                 
-                              
-                                
-                                
-                                
-                             
-                                
-                               
-                                
-                                    
-                                size_after=len(jl)
-
                                 size_after=len(jl)
                                 
                                    
