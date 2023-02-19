@@ -315,19 +315,19 @@ class encypthion_class:
                                                                               
                                                                           
                                                 if Number_Times2>0 and Number_Times2<=7 and compress3==1 and compress4==0 and compress5==0:
-                                                    save_04="10"+save_03
+                                                    save_04="0"+save_03
                                                     size_data12=size_data12+save_04
                                                     #print(len(save_04))
                                                 
                                                 elif Number_Times2>0 and Number_Times2<=7 and compress3==1 and compress4==1 and compress5==1:
-                                                    save_04="0"+save_03
+                                                    save_04="10"+Calculus
                                                     size_data12=size_data12+save_04
                                                 elif Number_Times2>0 and Number_Times2<=7 and compress3==1 and compress4==1 and compress5==0:
-                                                    save_04="0"+save_03
+                                                    save_04="10"+Calculus
                                                     size_data12=size_data12+save_04
                                                     
                                                 elif Number_Times2>0 and Number_Times2<=7 and compress3==1 and compress4==0 and compress5==1:
-                                                    save_04="0"+save_03
+                                                    save_04="10"+Calculus
                                                     size_data12=size_data12+save_04                                                    
                                                     #print(len(save_04))
                                                     
@@ -336,7 +336,7 @@ class encypthion_class:
                                                     size_data12=size_data12+save_04
                                                     
                                                     
-                                                elif  Number_Times2>7 and compress4==1 and compress5==1 and compress4==1 and compress4==1 or compress3!=1 and compress4==1 and compress3!=1 and compress4==1:
+                                                elif  Number_Times2>7 and compress4==1 or compress3!=1 and compress4==1 or  Number_Times2>7 and compress5==1 or compress3!=1 and compress5==1: 
                                                     save_04="111"+Calculus
                                                                                                      
                                                     size_data12=size_data12+save_04
