@@ -253,8 +253,9 @@ class encypthion_class:
                                                                                        	save_01=Calculus[:Times2+3]+Calculus[Times2+4:80]
                                                                                        	Equal_Not_compress=format(Number_Times,'03b')
                                                                                        	save_05=Calculus[:Times2]+Equal_Not_compress+Calculus[Times2+4:80]
-                                                                                       	if len(save_05)==79:
-                                                                                       		compress2=1
+                                                                                       	compress2=1
+                                                                                       	
+                                                                                       		
                                                                                        	
                                                                                        	
                                                                                        	
@@ -301,9 +302,8 @@ class encypthion_class:
                                                                       save_03=Calculus[80:Times4+3]+Calculus[Times4+4:]
                                                                       Equal_Not_compress=format(Number_Times2,'03b')
                                                                       save_03=save_05+Calculus[80:Times4]+Equal_Not_compress+Calculus[Times4+4:]
-                                                                      if len(save_03)==158:
-                                                                      	compress=1
-                                                                      	compress3=1
+                                                                      compress=1
+                                                                      compress3=1
        
                                                                      
                                                                       
@@ -321,19 +321,19 @@ class encypthion_class:
                                                     #print(len(save_04))
                                                 
                                                 elif Number_Times2>0 and Number_Times2<=7 and compress3==1 and compress4==1 and compress5==1:
-                                                    save_04="10"+Calculus2
+                                                    save_04="10"+save_03
                                                     size_data12=size_data12+save_04
                                                 elif Number_Times2>0 and Number_Times2<=7 and compress3==1 and compress4==1 and compress5==0:
-                                                    save_04="10"+Calculus2
+                                                    save_04="10"+save_03
                                                     size_data12=size_data12+save_04
                                                     
                                                 elif Number_Times2>0 and Number_Times2<=7 and compress3==1 and compress4==0 and compress5==1:
-                                                    save_04="10"+Calculus2
+                                                    save_04="10"+save_03
                                                     size_data12=size_data12+save_04                                                    
                                                     #print(len(save_04))
                                                     
                                                 elif  Number_Times2>7 and compress4==0 and compress5==0 or compress3!=1 and compress4==0 and compress5==0:
-                                                    save_04="110"+Calculus2
+                                                    save_04="110"+save_03
                                                     size_data12=size_data12+save_04
                                                     
                                                     
