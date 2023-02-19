@@ -199,6 +199,7 @@ class encypthion_class:
                                 while block<long:
                                                 long=len(size_data2)
                                                 Calculus=size_data2[block:block+blocks]
+                                                Calculus2=size_data2[block:block+blocks]
 
                                                 
                                                 block+=blocks
@@ -320,14 +321,14 @@ class encypthion_class:
                                                     #print(len(save_04))
                                                 
                                                 elif Number_Times2>0 and Number_Times2<=7 and compress3==1 and compress4==1 and compress5==1:
-                                                    save_04="10"+Calculus
+                                                    save_04="10"+Calculus2
                                                     size_data12=size_data12+save_04
                                                 elif Number_Times2>0 and Number_Times2<=7 and compress3==1 and compress4==1 and compress5==0:
-                                                    save_04="10"+Calculus
+                                                    save_04="10"+Calculus2
                                                     size_data12=size_data12+save_04
                                                     
                                                 elif Number_Times2>0 and Number_Times2<=7 and compress3==1 and compress4==0 and compress5==1:
-                                                    save_04="10"+Calculus
+                                                    save_04="10"+Calculus2
                                                     size_data12=size_data12+save_04                                                    
                                                     #print(len(save_04))
                                                     
