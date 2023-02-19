@@ -303,6 +303,7 @@ class encypthion_class:
                                                                       save_03=Calculus[80:Times4+3]+Calculus[Times4+4:]
                                                                       Equal_Not_compress=format(Number_Times2,'03b')
                                                                       save_03=save_05+Calculus2[80:Times4]+Equal_Not_compress+Calculus2[Times4+4:]
+                                                                      
                                                                       if len(save_03)==158:
                                                                       	compress=1
                                                                       	compress3=1
