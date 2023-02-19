@@ -303,7 +303,7 @@ class encypthion_class:
                                                                       save_03=save_05+Calculus[80:Times4]+Equal_Not_compress+Calculus[Times4+4:]
                                                                       if len(save_03)==158:
                                                                       	compress=1
-                                                                      compress3=1
+                                                                        compress3=1
        
                                                                      
                                                                       
