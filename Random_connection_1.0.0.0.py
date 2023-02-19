@@ -240,7 +240,7 @@ class encypthion_class:
                                                                        	
                                                                            
                                                                        	if Calculus[Times2:Times2+3]==Equal_Not_compress:
-                                                                       		Calculus=Calculus[:Times2]+Change+Calculus[Times2+4:]
+
                                                                        		#print(Calculus)
                                                                        		
                                                                        		compress4=1
@@ -291,7 +291,7 @@ class encypthion_class:
                                                                        	
                                                                            
                                                                        	if Calculus[Times4:Times4+3]==Equal_Not_compress:
-                                                                       		Calculus=Calculus[:Times4]+Change+Calculus[Times4+4:]
+                                                                       		
                                                                        		compress5=1
                                                                        		
                                                             if Times3>=80 and Times4>=80 and Calculus[Times3:Times3+4]==Calculus[Times4:Times4+4] and Times4!=Times3:
