@@ -192,19 +192,11 @@ class encypthion_class:
                                 
                                 
                               
-                              
                                 
-                                times_of_compression=0
-                                times_of_compression2=0
+                                
+                                
                                 #0xxx  
-                                while block<long or times_of_compression2!=1:
-                                                times_of_compression+=1
-                                                if len(size_data2)>len(size_data12) or times_of_compression==(2**24)-1:
-                                                        times_of_compression2=1
-                                                if      times_of_compression>1:
-                                                        size_data2=size_data12
-                                                                                                	
-                                                size_data12=""
+                                while block<long:
                                                 long=len(size_data2)
                                                 Calculus=size_data2[block:block+blocks]
                                                 Calculus2=size_data2[block:block+blocks]
@@ -367,9 +359,8 @@ class encypthion_class:
                                 
                                 
                                 
-                                times_of_compression-=1
-                                Info_times=format(times_of_compression,'024b')
-                                size_data11="1"+Info_times+"1"+size_data2
+                                
+                                size_data11="1"+size_data12
                                 
                                 lenf=len(size_data11)
                                             
