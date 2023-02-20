@@ -369,7 +369,7 @@ class encypthion_class:
                                 
                                 times_of_compression-=1
                                 Info_times=format(times_of_compression,'024b')
-                                size_data11="1"+Info_times+size_data2
+                                size_data11="1"+Info_times+"1"+size_data2
                                 
                                 lenf=len(size_data11)
                                             
