@@ -172,7 +172,7 @@ class encypthion_class:
                                     lenf3=len(size_data2)
                                 lenf2=len(size_data2)
                                 cout_compress=0
-                                while cout_compress!=2**16:
+                                while cout_compress!=10:
                                    
 	                                
 	                                cout_compress+=1
@@ -222,6 +222,8 @@ class encypthion_class:
 	                                                compress3=0
 	                                                compress4=0
 	                                                compress5=0
+	                                                compress6=0
+	                                                compress7=0
 	                                                compress_start=0
 	                                                compress_start2=0
 	                                                save_00=""
@@ -250,9 +252,15 @@ class encypthion_class:
 	                                                                       		
 	                                                                       		
 	                                                                       		compress4=1
+	                                                                       	
 	                                                                       		
 	                                                                       		
+	                                                                       	if Calculus[Times2:Times2+4]==Equal_Not_compress and Calculus[Times2+4:Times2+5]!=Equal_Not_compress[3:4]:
+	                                                                       		Calculus=Calculus[:Times2]+Change+Calculus[Times2+4:]
 	                                                                       		
+	                                                                       		
+	                                                                       		compress4=1	    
+	                                                                       		compress6=1                                                                   		
 	
 	                                                                        if Times>=0 and Times2>=0 and Calculus[Times:Times+4]==Calculus[Times2:Times2+4] and Times2!=Times:
 	                                                                                       Number_Times=(Times//4)-(Times2//4)
@@ -307,8 +315,17 @@ class encypthion_class:
 	                                                                       	if Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4]:
 	                                                                       		Calculus=Calculus[:Times4]+Change+Calculus[Times4+4:]
 	                                                                       	
+	                                                                       		compress5=1	                                                                           
+	                                                                       	if Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4]:
+	                                                                       		Calculus=Calculus[:Times4]+Change+Calculus[Times4+4:]
+	                                                                       	
 	                                                                       		compress5=1
 	                                                                       		
+	                                                                       	if Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]!=Equal_Not_compress[3:4]:
+	                                                                       		Calculus=Calculus[:Times4]+Change+Calculus[Times4+4:]
+	                                                                       	
+	                                                                       		compress5=1
+	                                                                       		compress7=1	                                                                       		
 	                                                            if Times3>=80 and Times4>=80 and Calculus[Times3:Times3+4]==Calculus[Times4:Times4+4] and Times4!=Times3:
 	                                                               Number_Times2=(Times3//4)-(Times4//4)
 	                                                              
@@ -335,15 +352,35 @@ class encypthion_class:
 	                                                                            
 	                                                                              
 	                                                                          
-	                                                if Number_Times2>0 and Number_Times2<=7 and compress3==1 and compress4==1 and compress5==1:
+	                                                if Number_Times2>0 and Number_Times2<=7 and compress3==1 and compress4==1 and compress5==1 and compress6==0 and compress7==0:
+	                                                    
+	                                                    raise SystemExit
+	                                                elif Number_Times2>0 and Number_Times2<=7 and compress3==1 and compress4==1 and compress6==1 and compress7==1 and compress7==1:
 	                                                    save_04="0"+save_03
-	                                                    size_data12=size_data12+save_04
-	                                                    #print(save_04)
-	                                                
+	                                                 
+	                                                    size_data12=size_data12+save_04	                                                
 	                                                else:
 	                                                    save_04="1"+Calculus2
 	                                                    size_data12=size_data12+save_04
-	                                                                                                  
+	                                                    #print(save_04)
+	                                                	
+	       
+	                                                 
+	                                              
+	                                                    
+	                                            
+	                                             
+	                                       
+	                                                                                                      
+	                                                                                                        
+	                                                    
+	                                                    
+	
+	                                                
+	                                                    
+	                                                                              
+	                                
+	                                
 	                                size_data2=size_data12
                                 
                                 size_data11="1"+size_data12
