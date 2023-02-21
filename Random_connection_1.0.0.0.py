@@ -172,7 +172,7 @@ class encypthion_class:
                                     lenf3=len(size_data2)
                                 lenf2=len(size_data2)
                                 cout_compress=0
-                                while cout_compress!=255:
+                                while cout_compress!=2**16:
                                    
 	                                
 	                                cout_compress+=1
@@ -200,7 +200,7 @@ class encypthion_class:
 	                                
 	                                
 	                               
-	                                
+	                             
 	                                while block<long:
 	                                                long=len(size_data2)
 	                                                Calculus=size_data2[block:block+blocks]
@@ -354,8 +354,9 @@ class encypthion_class:
 	                                                                              
 	                                                                          
 	                                                if Number_Times2>0 and Number_Times2<=7 and compress3==1 and compress4==1 and compress5==1 and compress6==0 and compress7==0:
+	                                                    save_04="1"+Calculus2
 	                                                    
-	                                                    not_compres_file=1
+
 	                                                elif Number_Times2>0 and Number_Times2<=7 and compress3==1 and compress4==1 and compress6==1 and compress7==1 and compress7==1:
 	                                                    save_04="0"+save_03
 	                                                 
@@ -381,10 +382,10 @@ class encypthion_class:
 	                                                    
 	                                                                              
 	                                
-	                                if not_compres_file==0:
-	                                	size_data2="1"+size_data12
-	                                if not_compres_file==1:
-	                                	size_data2="0"+size_data2
+	                                
+	                                
+	                                
+	                                size_data2=size_data12
                                 
                                 size_data11="1"+size_data12
                                 
