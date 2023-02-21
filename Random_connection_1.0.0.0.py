@@ -343,25 +343,7 @@ class encypthion_class:
 	                                                else:
 	                                                    save_04="1"+Calculus2
 	                                                    size_data12=size_data12+save_04
-	                                                    #print(save_04)
-	                                                	
-	       
-	                                                 
-	                                              
-	                                                    
-	                                            
-	                                             
-	                                       
-	                                                                                                      
-	                                                                                                        
-	                                                    
-	                                                    
-	
-	                                                
-	                                                    
-	                                                                              
-	                                
-	                                
+	                                                                                                  
 	                                size_data2=size_data12
                                 
                                 size_data11="1"+size_data12
