@@ -245,7 +245,7 @@ class encypthion_class:
 	                                                                       	Equal_Not_compress=format(Number_Times,'04b')
 	                                                                       	
 	                                                                           
-	                                                                       	if Calculus[Times2:Times2+4]==Equal_Not_compress:
+	                                                                       	if Calculus[Times2:Times2+4]==Equal_Not_compress and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4]:
 	                                                                       		Calculus=Calculus[:Times2]+Change+Calculus[Times2+4:]
 	                                                                       		
 	                                                                       		
@@ -259,7 +259,7 @@ class encypthion_class:
 	                                                                                       if Number_Times>0 and Number_Times<=7 and compress_start==0:
 	                                                                                       	save_01=Calculus[:Times2+3]+Calculus[Times2+4:80]
 	                                                                                       	Equal_Not_compress=format(Number_Times,'03b')
-	                                                                                       	save_05=Calculus2[:Times2]+Equal_Not_compress+Calculus2[Times2+4:80]
+	                                                                                       	save_05=Calculus2[:Times2+3]+Calculus2[Times2+4:80]
 	                                                                                      
 	                                                                                       	
 	                                                                                       	if len(save_05)==79:
@@ -304,7 +304,7 @@ class encypthion_class:
 	                                                                       	Equal_Not_compress=format(Number_Times,'04b')
 	                                                                       	
 	                                                                           
-	                                                                       	if Calculus[Times4:Times4+4]==Equal_Not_compress:
+	                                                                       	if Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4]:
 	                                                                       		Calculus=Calculus[:Times4]+Change+Calculus[Times4+4:]
 	                                                                       	
 	                                                                       		compress5=1
@@ -318,7 +318,7 @@ class encypthion_class:
 	                                                                      
 	                                                                      save_03=Calculus[80:Times4+3]+Calculus[Times4+4:]
 	                                                                      Equal_Not_compress=format(Number_Times2,'03b')
-	                                                                      save_03=save_05+Calculus2[80:Times4]+Equal_Not_compress+Calculus2[Times4+4:]
+	                                                                      save_03=save_05+Calculus2[80:Times4+3]+Calculus2[Times4+4:]
 	                                                                      
 	                                                                      if len(save_03)==158:
 	                                                                      	compress=1
