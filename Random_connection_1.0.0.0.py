@@ -172,7 +172,7 @@ class encypthion_class:
                                     lenf3=len(size_data2)
                                 lenf2=len(size_data2)
                                 cout_compress=0
-                                while cout_compress!=255:
+                                while cout_compress!=500:
                                     cout_compress+=1
                                     size_data12=""
                                     Times=""
