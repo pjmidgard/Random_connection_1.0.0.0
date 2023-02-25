@@ -227,7 +227,7 @@ class encypthion_class:
                                                         compress6=1
                                                 if Times>=0 and Times2>=0 and Calculus[Times:Times+4]==Calculus[Times2:Times2+4] and Times2!=Times:
                                                     Number_Times=((Times//4)-(Times-Times2//4))-1
-                                                    if Number_Times>0 and Number_Times<=7 and compress_start==0:
+                                                    if Number_Times>=0 and Number_Times<=7 and compress_start==0:
                                                         save_01=Calculus[:Times2+3]+Calculus[Times2+4:80]
                                                         Equal_Not_compress=format(Number_Times,'03b')
                                                         save_05=Calculus2[:Times2+3]+Calculus2[Times2+4:80]
@@ -262,7 +262,7 @@ class encypthion_class:
                                                             compress7=1
                                                     if Times3>=80 and Times4>=80 and Calculus[Times3:Times3+4]==Calculus[Times4:Times4+4] and Times4!=Times3:
                                                         Number_Times2=((Times3//4)-(Times4//4))-1
-                                                        if Number_Times2>0 and Number_Times2<=7 and compress_start2==0 and compress2==1:
+                                                        if Number_Times2>=0 and Number_Times2<=7 and compress_start2==0 and compress2==1:
                                                             save_03=Calculus[80:Times4+3]+Calculus[Times4+4:]
                                                             Equal_Not_compress=format(Number_Times2,'03b')
                                                             save_03=save_05+Calculus2[80:Times4+3]+Calculus2[Times4+4:]
