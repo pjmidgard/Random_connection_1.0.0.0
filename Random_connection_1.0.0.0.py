@@ -174,6 +174,8 @@ class encypthion_class:
                                 cout_compress=0
                                 while cout_compress!=1000:
                                     cout_compress+=1
+                                  
+                                 
                                     size_data12=""
                                     Times=""
 
@@ -219,10 +221,10 @@ class encypthion_class:
                                                     Change=Calculus[Times:Times+4]
                                                     Equal_Not_compress=format(Number_Times,'04b')
                                                     if Calculus[Times2:Times2+4]==Equal_Not_compress and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4]:
-                                                        Calculus=Calculus[:Times2]+Change+Calculus[Times2+4:]
+
                                                         compress4=1
                                                     if Calculus[Times2:Times2+4]==Equal_Not_compress and Calculus[Times2+4:Times2+5]!=Equal_Not_compress[3:4]:
-                                                        Calculus=Calculus[:Times2]+Change+Calculus[Times2+4:]
+                                                        
                                                         compress4=1
                                                         compress6=1
                                                 if Times>=0 and Times2>=0 and Calculus[Times:Times+4]==Calculus[Times2:Times2+4] and Times2!=Times:
@@ -250,14 +252,12 @@ class encypthion_class:
                                                         Number_Times=((Times3//4)-(Times4//4))-1
                                                         Change=Calculus[Times3:Times3+4]
                                                         Equal_Not_compress=format(Number_Times,'04b')
+
                                                         if Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4]:
-                                                            Calculus=Calculus[:Times4]+Change+Calculus[Times4+4:]
-                                                            compress5=1
-                                                        if Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4]:
-                                                            Calculus=Calculus[:Times4]+Change+Calculus[Times4+4:]
+                                                            
                                                             compress5=1
                                                         if Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]!=Equal_Not_compress[3:4]:
-                                                            Calculus=Calculus[:Times4]+Change+Calculus[Times4+4:]
+                                                            
                                                             compress5=1
                                                             compress7=1
                                                     if Times3>=80 and Times4>=80 and Calculus[Times3:Times3+4]==Calculus[Times4:Times4+4] and Times4!=Times3:
@@ -288,6 +288,8 @@ class encypthion_class:
                                             #print(save_04)
 
                                     size_data2=size_data12[::-1]
+                                    #print(len(size_data2))
+                                   
                                     
                                     
                                 
