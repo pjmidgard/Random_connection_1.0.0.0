@@ -172,8 +172,10 @@ class encypthion_class:
                                     lenf3=len(size_data2)
                                 lenf2=len(size_data2)
                                 cout_compress=0
+                                opssite_equal=1
                                 while cout_compress!=1000:
                                     cout_compress+=1
+                                    #print(cout_compress)
                                   
                                  
                                     size_data12=""
@@ -220,10 +222,10 @@ class encypthion_class:
                                                     Number_Times=((Times//4)-(Times2//4))-1
                                                     Change=Calculus[Times:Times+4]
                                                     Equal_Not_compress=format(Number_Times,'04b')
-                                                    if Calculus[Times2:Times2+4]==Equal_Not_compress and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4]:
+                                                    if opssite_equal==1 and Calculus[Times2:Times2+4]==Equal_Not_compress and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] or opssite_equal==2 and Calculus[Times2:Times2+4]==Equal_Not_compress and Calculus[Times2+4:Times4+5]!=Equal_Not_compress[3:4]:
 
                                                         compress4=1
-                                                    if Calculus[Times2:Times2+4]==Equal_Not_compress and Calculus[Times2+4:Times2+5]!=Equal_Not_compress[3:4]:
+                                                    if opssite_equal==2 and Calculus[Times2:Times2+4]==Equal_Not_compress and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] or opssite_equal==1 and Calculus[Times2:Times2+4]==Equal_Not_compress and Calculus[Times2+4:Times4+5]!=Equal_Not_compress[3:4]:
                                                         
                                                         compress4=1
                                                         compress6=1
@@ -253,10 +255,10 @@ class encypthion_class:
                                                         Change=Calculus[Times3:Times3+4]
                                                         Equal_Not_compress=format(Number_Times,'04b')
 
-                                                        if Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4]:
+                                                        if opssite_equal==1 and Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4] or opssite_equal==2 and Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]!=Equal_Not_compress[3:4]:
                                                             
                                                             compress5=1
-                                                        if Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]!=Equal_Not_compress[3:4]:
+                                                        if opssite_equal==2 and Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4] or opssite_equal==1 and Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]!=Equal_Not_compress[3:4]:
                                                             
                                                             compress5=1
                                                             compress7=1
@@ -288,6 +290,9 @@ class encypthion_class:
                                             #print(save_04)
 
                                     size_data2=size_data12[::-1]
+                                    opssite_equal+=1
+                                    if opssite_equal==3:
+                                    	opssite_equal=1
                                     #print(len(size_data2))
                                    
                                     
