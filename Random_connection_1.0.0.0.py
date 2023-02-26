@@ -259,7 +259,7 @@ class encypthion_class:
                                                         if divide==1 and Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4] or divide==2 and Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]!=Equal_Not_compress[3:4]: 
                                                             Calculus=Calculus[:Times4]+Change+Calculus[Times4+4:]
                                                             compress5=1
-                                                        if divide==1 and Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]!=Equal_Not_compress[3:4] or divide==1 and Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4]:
+                                                        if divide==1 and Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]!=Equal_Not_compress[3:4] or divide==2 and Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4]:
                                                             Calculus=Calculus[:Times4]+Change+Calculus[Times4+4:]
                                                             compress5=1
                                                             compress7=1
