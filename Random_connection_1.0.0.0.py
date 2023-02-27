@@ -314,8 +314,12 @@ class encypthion_class:
                                            
                                             #print(len(save_04))
                                             #print(compress4)
-                                            size_data12=size_data12+"111"+Calculus2
-                                            
+                                            size_data12=size_data12+"1110"+Calculus2
+                                        elif compress4==0 and compress5==1 and compress6==0 and compress7==0 and compress_stop==0:
+                                           
+                                            #print(len(save_04))
+                                            #print(compress4)
+                                            size_data12=size_data12+"1111"+Calculus2
 
                                     size_data2=size_data12[::-1]
                                     #print(len(size_data2))
