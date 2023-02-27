@@ -228,7 +228,7 @@ class encypthion_class:
                                                     if opssite_equal==1 and Calculus[Times2+4:Times2+5]==Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1 or opssite_equal==2 and Calculus[Times2+4:Times4+5]!=Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1:
 
                                                         compress4=1
-                                                        save_05=Calculus2[Times2+1:Times2+5]+Calculus2[:Times2]+Calculus2[Times2+5:80]
+                                                        save_05=Calculus2[1:5]
                                                         
                                                     elif opssite_equal==2 and Calculus[Times2+4:Times2+5]==Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1 or opssite_equal==1 and Calculus[Times2+4:Times4+5]!=Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1:
                                                         
@@ -239,7 +239,7 @@ class encypthion_class:
                                                         if compress_start==0:
                                                            
                                                       
-                                                           save_05=Calculus2[Times2+1:Times2+5]+Calculus2[:Times2]+Calculus2[Times2+5:80]
+                                                           save_05=Calculus2[1:5]
                                                            
                                                            
                                                            compress2=1
@@ -255,7 +255,7 @@ class encypthion_class:
                                             save_04=save_05
                                 
                                             size_data12=size_data12+save_04
-                                            #print(save_04)
+                                            #print(len(save_04))
                                         
 	                                                    
 
