@@ -225,12 +225,12 @@ class encypthion_class:
                                                     if opssite_equal==1 and Calculus[Times2:Times2+4]==Equal_Not_compress and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] or opssite_equal==2 and Calculus[Times2:Times2+4]==Equal_Not_compress and Calculus[Times2+4:Times4+5]!=Equal_Not_compress[3:4]:
 
                                                         compress4=1
-                                                    if opssite_equal==2 and Calculus[Times2:Times2+4]==Equal_Not_compress and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] or opssite_equal==1 and Calculus[Times2:Times2+4]==Equal_Not_compress and Calculus[Times2+4:Times4+5]!=Equal_Not_compress[3:4]:
+                                                    if opssite_equal==2 and Calculus[Times2:Times2+4]==Equal_Not_compress and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<8 or opssite_equal==1 and Calculus[Times2:Times2+4]==Equal_Not_compress and Calculus[Times2+4:Times4+5]!=Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<8:
                                                         
                                                         compress4=1
                                                         compress6=1
 
-                                                        Number_Times=((Times//4)-(Times-Times2//4))-1
+
                                                         if compress_start==0:
                                                            save_01=Calculus[:Times2+3]+Calculus[Times2+4:80]
                                                       
@@ -258,14 +258,14 @@ class encypthion_class:
                                                         if opssite_equal==1 and Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4] or opssite_equal==2 and Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]!=Equal_Not_compress[3:4]:
                                                             
                                                             compress5=1
-                                                        if opssite_equal==2 and Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4] or opssite_equal==1 and Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]!=Equal_Not_compress[3:4]:
+                                                        if opssite_equal==2 and Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<8 or opssite_equal==1 and Calculus[Times4:Times4+4]==Equal_Not_compress and Calculus[Times4+4:Times4+5]!=Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<8:
                                                             
                                                             compress5=1
                                                             compress7=1
-                                                            Number_Times2=((Times3//4)-(Times4//4))-1
+
                                                             if compress_start2==0 and compress2==1:
                                                                save_03=Calculus[80:Times4+3]+Calculus[Times4+4:]
-                                                               Equal_Not_compress=format(Number_Times2,'03b')
+                                                                
                                                                save_03=save_05+Calculus2[80:Times4+3]+Calculus2[Times4+4:]
                                                                if len(save_03)==158:
                                                                   compress=1
