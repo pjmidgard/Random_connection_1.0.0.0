@@ -310,23 +310,20 @@ class encypthion_class:
                                             save_04=Stop+save_03
                                             #print(len(save_04))
                                             size_data12=size_data12+save_04
-                                        elif compress4==0 and compress5==0 and compress6==0 and compress7==0 and compress_stop==0:
-                                           
-                                            #print(len(save_04))
-                                            #print(compress4)
-                                            size_data12=size_data12+"1110"+Calculus2
+                                        
                                         elif compress4==0 and compress5==1 and compress6==0 and compress7==0 and compress_stop==0:
                                            
                                             #print(len(save_04))
                                             #print(compress4)
-                                            size_data12=size_data12+"1111"+Calculus2
+                                            size_data12=size_data12+"111"+Calculus2
+                                     
 
                                     size_data2=size_data12[::-1]
                                     #print(len(size_data2))
                                     opssite_equal+=1
                                     if opssite_equal==3:
                                     	opssite_equal=1
-                                    if len(size_data2)<=3000:
+                                    if len(size_data2)<=4000:
                                         count_times_stop=1
                                    
                                     
