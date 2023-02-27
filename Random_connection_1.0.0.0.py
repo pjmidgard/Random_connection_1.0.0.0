@@ -174,7 +174,8 @@ class encypthion_class:
                                 #print(lenf2)
                                 cout_compress=0
                                 opssite_equal=1
-                                while cout_compress!=500:
+                                Stop_compress=0
+                                while Stop_compress!=1:
                                     cout_compress+=1
                                     compress_stop=0
                                     #print(cout_compress)
@@ -276,12 +277,13 @@ class encypthion_class:
                                     opssite_equal+=1
                                     if opssite_equal==3:
                                     	opssite_equal=1
-                                    #print(len(size_data2))
+                                    if len(size_data2)<=160:
+                                        Stop_compress=1
                                    
                                     
                                     
-                                
-                                size_data11="1"+size_data12
+                                Count_times_predict=format(cout_compress,'0160b')
+                                size_data11="1"+Count_times_predict+size_data12
                                 
                                 lenf=len(size_data11)
                                             
