@@ -194,10 +194,10 @@ class encypthion_class:
                                         Calculus=size_data2[block:block+blocks]
                                         Calculus2=size_data2[block:block+blocks]
                                         block+=blocks
-                                        Times=-4
-                                        Times2=-4
-                                        Times3=76
-                                        Times4=76
+                                        Times=-1
+                                        Times2=-1
+                                        Times3=79
+                                        Times4=79
                                         compress=0
                                         compress2=0
                                         compress3=0
@@ -215,22 +215,22 @@ class encypthion_class:
                                         Check=0
                                         Number_Times2=-1
 
-                                        while Times!=76:
-                                            Times+=4
-                                            Times2=-4
-                                            while Times2!=76:
-                                                Times2+=4
-                                                if Times==0 and Times2>=0 and Calculus[Times:Times+4]!=Calculus[Times2:Times2+4] and Times2!=Times:
+                                        while Times!=79:
+                                            Times+=1
+                                            Times2=-1
+                                            while Times2!=79:
+                                                Times2+=1
+                                                if Times==0 and Times2>=0 and Calculus[Times:Times+1]!=Calculus[Times2:Times2+1] and Times2!=Times:
                                                     Number_Times=-((Times//4)-(Times2//4))-1
                                                     #print(Number_Times)
                                                     Change=Calculus[Times:Times+4]
                                                     Equal_Not_compress=format(Number_Times,'04b')
-                                                    if opssite_equal==1 and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<1 or opssite_equal==2 and Calculus[Times2+4:Times4+5]!=Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<1:
+                                                    if opssite_equal==1 and Calculus[Times2+4:Times2+5]==Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1 or opssite_equal==2 and Calculus[Times2+4:Times4+5]!=Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1:
 
                                                         compress4=1
                                                         save_05=Calculus2[Times2+4:Times2+5]+Calculus2[:Times2]+Calculus2[Times2+5:80]
                                                         
-                                                    if opssite_equal==2 and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<1 or opssite_equal==1 and Calculus[Times2+4:Times4+5]!=Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<1:
+                                                    if opssite_equal==2 and Calculus[Times2+4:Times2+5]==Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1 or opssite_equal==1 and Calculus[Times2+4:Times4+5]!=Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1:
                                                         
                                                         compress4=1
                                                         compress6=1
@@ -248,26 +248,26 @@ class encypthion_class:
                                                             
                                         
 
-                                            Times3=76
-                                            Times4=76
-                                            while Times3!=156:
-                                                Times3+=4
-                                                Times4=76
+                                            Times3=79
+                                            Times4=79
+                                            while Times3!=159:
+                                                Times3+=1
+                                                Times4=79
                                                     
-                                                while Times4!=156:
-                                                    Times4+=4
-                                                    if Times3==80 and Times4>=80 and Calculus[Times3:Times3+4]!=Calculus[Times4:Times4+4] and Times4!=Times3:
+                                                while Times4!=159:
+                                                    Times4+=1
+                                                    if Times3==80 and Times4>=80 and Calculus[Times3:Times3+1]!=Calculus[Times4:Times4+1] and Times4!=Times3:
                                                         Number_Times=-((Times3//4)-(Times4//4))-1
                                                         Change=Calculus[Times3:Times3+4]
                                                         Equal_Not_compress=format(Number_Times,'04b')
 
-                                                        if opssite_equal==1 and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<1 or opssite_equal==2 and Calculus[Times4+4:Times4+5]!=Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<1:
+                                                        if opssite_equal==1 and Calculus[Times4+4:Times4+5]==Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1 or opssite_equal==2 and Calculus[Times4+4:Times4+5]!=Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1:
                                                             
                                                             compress5=1
                                                             
                                                                 
                                                             save_03=save_05+Calculus2[Times4+4:Times4+5]+Calculus2[80:Times4]+Calculus2[Times4+5:]
-                                                        if opssite_equal==2 and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<1 or opssite_equal==1 and Calculus[Times4+4:Times4+5]!=Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<1:
+                                                        if opssite_equal==2 and Calculus[Times4+4:Times4+5]==Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1 or opssite_equal==1 and Calculus[Times4+4:Times4+5]!=Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1:
                                                             
                                                             compress5=1
                                                             compress7=1
@@ -314,7 +314,7 @@ class encypthion_class:
                                     opssite_equal+=1
                                     if opssite_equal==3:
                                     	opssite_equal=1
-                                    #print(len(size_data2))
+                                    print(len(size_data2))
                                    
                                     
                                     
