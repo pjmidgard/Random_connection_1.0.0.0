@@ -174,7 +174,7 @@ class encypthion_class:
                                 #print(lenf2)
                                 cout_compress=0
                                 opssite_equal=1
-                                while cout_compress!=100:
+                                while cout_compress!=500:
                                     cout_compress+=1
                                     compress_stop=0
                                     #print(cout_compress)
@@ -186,7 +186,7 @@ class encypthion_class:
                                     size_data11=""
 
                                     block=0
-                                    blocks=160
+                                    blocks=5
                                     Calculus=""
                                     not_compres_file=0
                                     while block<long:
@@ -228,9 +228,9 @@ class encypthion_class:
                                                     if opssite_equal==1 and Calculus[Times2+4:Times2+5]==Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1 or opssite_equal==2 and Calculus[Times2+4:Times4+5]!=Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1:
 
                                                         compress4=1
-                                                        save_05=Calculus2[Times2+4:Times2+5]+Calculus2[:Times2]+Calculus2[Times2+5:80]
+                                                        save_05=Calculus2[Times2+1:Times2+5]+Calculus2[:Times2]+Calculus2[Times2+5:80]
                                                         
-                                                    if opssite_equal==2 and Calculus[Times2+4:Times2+5]==Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1 or opssite_equal==1 and Calculus[Times2+4:Times4+5]!=Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1:
+                                                    elif opssite_equal==2 and Calculus[Times2+4:Times2+5]==Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1 or opssite_equal==1 and Calculus[Times2+4:Times4+5]!=Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1:
                                                         
                                                         compress4=1
                                                         compress6=1
@@ -239,7 +239,7 @@ class encypthion_class:
                                                         if compress_start==0:
                                                            
                                                       
-                                                           save_05=Calculus2[Times2+4:Times2+5]+Calculus2[:Times2]+Calculus2[Times2+5:80]
+                                                           save_05=Calculus2[Times2+1:Times2+5]+Calculus2[:Times2]+Calculus2[Times2+5:80]
                                                            
                                                            
                                                            compress2=1
@@ -248,65 +248,27 @@ class encypthion_class:
                                                             
                                         
 
-                                            Times3=79
-                                            Times4=79
-                                            while Times3!=159:
-                                                Times3+=1
-                                                Times4=79
-                                                    
-                                                while Times4!=159:
-                                                    Times4+=1
-                                                    if Times3==80 and Times4>=80 and Calculus[Times3:Times3+1]!=Calculus[Times4:Times4+1] and Times4!=Times3:
-                                                        Number_Times=-((Times3//4)-(Times4//4))-1
-                                                        Change=Calculus[Times3:Times3+4]
-                                                        Equal_Not_compress=format(Number_Times,'04b')
-
-                                                        if opssite_equal==1 and Calculus[Times4+4:Times4+5]==Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1 or opssite_equal==2 and Calculus[Times4+4:Times4+5]!=Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1:
-                                                            
-                                                            compress5=1
-                                                            
-                                                                
-                                                            save_03=save_05+Calculus2[Times4+4:Times4+5]+Calculus2[80:Times4]+Calculus2[Times4+5:]
-                                                        if opssite_equal==2 and Calculus[Times4+4:Times4+5]==Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1 or opssite_equal==1 and Calculus[Times4+4:Times4+5]!=Equal_Not_compress[0:1] and Number_Times>-1 and Number_Times<1:
-                                                            
-                                                            compress5=1
-                                                            compress7=1
-
-                                                            if compress_start2==0 and compress2==1:
-                                                               
-                                                                
-                                                               save_03=save_05+Calculus2[Times4+4:Times4+5]+Calculus2[80:Times4]+Calculus2[Times4+5:]
-                                                               #print(len(save_03))
-                                                            
-                                                               
-                                                               compress=1
-                                                               compress3=1
-                                                               compress_start2=1
-                                                                
+                                   
                                                                 
                                                         
-                                        if compress4==1 and compress5==1 and compress6==0 and compress7==0 and compress_stop==0:
-                                            save_04="10"+save_03
+                                        if compress4==1 and compress6==0:
+                                            save_04=save_05
                                 
                                             size_data12=size_data12+save_04
                                             #print(save_04)
                                         
 	                                                    
 
-                                        elif compress3==1 and compress4==1 and compress6==1 and compress7==1 and compress7==1 and compress_stop==0:
+                                        elif compress2==1 and compress4==1 and compress6==1:
 
-                                            save_04="0"+save_03
-                                            #print(len(save_03))
+                                            save_04=save_05
+
+                                            #print(len(save_05))
                                             size_data12=size_data12+save_04
                                             
                                         
-                                        else:
-                                            Stop=""
-                                            if compress_stop==0:
                                             
-                                                Stop="11"
-                                            save_04=Stop+Calculus2
-                                            size_data12=size_data12+save_04
+                                        
                                          
                                             
 
