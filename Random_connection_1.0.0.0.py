@@ -252,7 +252,7 @@ class encypthion_class:
                                                             compress2=1
                                                             compress_start=1
                                                             #print(save_05)
-                                                            compress4=1
+                                                            
                                                             compress6=1
                                                             #print(len(save_05)) 
                                                         
