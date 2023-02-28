@@ -232,7 +232,7 @@ class encypthion_class:
                                                     if opssite_equal==1 and Calculus[Times:Times+4]=="1111" and Calculus[Times+4:Times+5]==Equal_Not_compress[3:4] and Calculus[Times2:Times2+4]=="0000" and Number_Times>-1 and Number_Times<16  and Times//4>-1 and Times//4<16:
 
                             
-                                                        save_05=Equal_Not_compress[:3]+Number_TimesE[:3]+Calculus2[:Times]+Calculus2[Times+4:Times+5]+Calculus2[Times+5:Times2]+Calculus2[Times2+4:Times2+5]+Calculus2[Times2+5:80]
+                                                        save_05=Equal_Not_compress[:3]+Calculus2[Times+4:Times+5]+Number_TimesE[:3]+Calculus2[Times2+4:Times2+5]+Calculus2[:Times]+Calculus2[Times+5:Times2]+Calculus2[Times2+5:80]
                                                         if len(save_05)==78:
                                                             #print(save_05)
                                                             compress4=1
@@ -245,7 +245,7 @@ class encypthion_class:
                                                         
                                                            
                                                       
-                                                        save_05=Equal_Not_compress[:3]+Number_TimesE[:3]+Calculus2[:Times]+Calculus2[Times+4:Times+5]+Calculus2[Times+5:Times2]+Calculus2[Times2+4:Times2+5]+Calculus2[Times2+5:80]
+                                                        save_05=Equal_Not_compress[:3]+Calculus2[Times+4:Times+5]+Number_TimesE[:3]+Calculus2[Times2+4:Times2+5]+Calculus2[:Times]+Calculus2[Times+5:Times2]+Calculus2[Times2+5:80]
 
                                                         
                                                         if len(save_05)==78:   
