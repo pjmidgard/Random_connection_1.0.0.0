@@ -272,7 +272,7 @@ class encypthion_class:
                                                         Equal_Not_compress=format(Number_Times,'04b')
                                                         Number_TimesE=format(Times3//4,'04b')
 
-                                                        if opssite_equal==1 and Calculus[Times3+4:Times3+4]=="1" and Calculus[Times3+4:Times3+5]==Equal_Not_compress[3:4] and Calculus[Times4+3:Times4+4]=="0" and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16  and Times//4>1 and Times//4<16:
+                                                        if opssite_equal==1 and Calculus[Times3+4:Times3+3]=="111" and Calculus[Times3+4:Times3+5]==Equal_Not_compress[3:4] and Calculus[Times4+3:Times4+3]=="000" and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16  and Times//4>1 and Times//4<16:
                                                             
                                                             
                                                             
@@ -281,7 +281,7 @@ class encypthion_class:
                                                             if len(save_03)==156:
                                                                 compress5=1
                                                                 
-                                                        if opssite_equal==1 and Calculus[Times3:Times3+3]=="111" and Calculus[Times3+4:Times3+5]==Equal_Not_compress[3:4] and Calculus[Times4:Times4+3]=="000" and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16 and Times//4>1 and Times//4<16:
+                                                        if opssite_equal==1 and Calculus[Times3+3:Times3+4]=="1" and Calculus[Times3+4:Times3+5]==Equal_Not_compress[3:4] and Calculus[Times4+3:Times4+4]=="0" and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16 and Times//4>1 and Times//4<16:
                                                             
                                                            
                                                             
@@ -301,8 +301,8 @@ class encypthion_class:
                                                                 
                                                         
                                                         
-                                        if compress4==1 and compress5==1 and compress6==0 and compress7==1 and compress_stop==0:
-                                            save_04="0"+save_03
+                                        if compress4==1 and compress5==1 and compress6==1 and compress7==0 and compress_stop==0:
+                                            save_04="10"+save_03
                                         
                                 
                                             size_data12=size_data12+save_04
@@ -310,10 +310,10 @@ class encypthion_class:
                                         
 	                                                    
 
-                                        elif compress4==1 and compress5==1 and compress7==0 and compress6==1 and compress_stop==0:
+                                        elif compress4==1 and compress5==1 and compress7==1 and compress6==0 and compress_stop==0:
 
-                                            save_04="10"+save_03
-                                            print(len(save_04))
+                                            save_04="0"+save_03
+                                            #print(len(save_04))
                                             size_data12=size_data12+save_04
                                             
                                         
