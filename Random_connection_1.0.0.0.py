@@ -171,7 +171,7 @@ class encypthion_class:
 
                                     lenf3=len(size_data2)
                                 lenf2=len(size_data2)
-                                print(lenf2)
+                                #print(lenf2)
                                 cout_compress=0
                                 opssite_equal=1
                                 count_times_stop=0
