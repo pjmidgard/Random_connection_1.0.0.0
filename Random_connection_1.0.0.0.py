@@ -231,7 +231,7 @@ class encypthion_class:
                                                     if opssite_equal==1 and Calculus[Times2:Times2+3]=="000" and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16 or opssite_equal==2 and Calculus[Times2:Times2+3]=="111" and Calculus[Times2+4:Times2+5]!=Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16:
 
                                                         compress4=1
-                                                        save_05=Equal_Not_compress[:3]+Calculus2[Times2+4:Times2+5]+Calculus2[:Times2]+Calculus2[Times2+5:80]
+                                                        save_05=Equal_Not_compress[:3]+Calculus2[Times2+4:Times2+5]+Calculus2[3:Times2]+Calculus2[Times2+5:80]
                                                         
                                                     elif opssite_equal==2 and Calculus[Times2:Times2+3]=="000" and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16 or opssite_equal==1 and Calculus[Times2:Times2+3]=="111" and Calculus[Times2+4:Times2+5]!=Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16:
                                                         
@@ -242,7 +242,7 @@ class encypthion_class:
                                                         
                                                            
                                                       
-                                                        save_05=Equal_Not_compress[:3]+Calculus2[Times2+4:Times2+5]+Calculus2[:Times2]+Calculus2[Times2+5:80]
+                                                        save_05=Equal_Not_compress[:3]+Calculus2[Times2+4:Times2+5]+Calculus2[3:Times2]+Calculus2[Times2+5:80]
                                                            
                                                            
                                                         compress2=1
@@ -269,7 +269,7 @@ class encypthion_class:
                                                             compress5=1
                                                             
                                                                 
-                                                            save_03=save_05+Equal_Not_compress[:3]+Calculus2[Times4+4:Times4+5]+Calculus2[80:Times4]+Calculus2[Times4+5:]
+                                                            save_03=save_05+Equal_Not_compress[:3]+Calculus2[Times4+4:Times4+5]+Calculus2[83:Times4]+Calculus2[Times4+5:]
                                                         elif opssite_equal==2 and Calculus[Times4:Times4+3]=="000" and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16 or opssite_equal==1 and Calculus[Times4:Times4+3]=="111" and Calculus[Times4+4:Times4+5]!=Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16:
                                                             
                                                             compress5=1
@@ -278,7 +278,7 @@ class encypthion_class:
                                                             
                                                                
                                                                 
-                                                            save_03=save_05+Equal_Not_compress[:3]+Calculus2[Times4+4:Times4+5]+Calculus2[80:Times4]+Calculus2[Times4+5:]
+                                                            save_03=save_05+Equal_Not_compress[:3]+Calculus2[Times4+4:Times4+5]+Calculus2[83:Times4]+Calculus2[Times4+5:]
                                                                #print(len(save_03))
                                                             
                                                                
@@ -314,7 +314,7 @@ class encypthion_class:
 
                                         
                                     size_data2=size_data12[::-1]
-                                    print(len(size_data2))
+                                    #print(len(size_data2))
                                     opssite_equal+=1
                                     if opssite_equal==3:
                                     	opssite_equal=1
