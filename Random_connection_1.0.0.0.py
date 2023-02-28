@@ -282,14 +282,8 @@ class encypthion_class:
                                             
                                         
                                         else:
-                                            not_compress=""
-                                            if compress_stop<=0:
-                                                not_compress="11"
-                                            if compress_stop>=0:
-                                                compress_stop+=1
-                                                
-                                            if  compress_stop==50:
-                                                compress_stop=0
+                                            not_compress="11"
+                                         
                                                 
                                             save_04=not_compress+Calculus2
                                             #print(len(save_04))
