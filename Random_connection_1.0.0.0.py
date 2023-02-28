@@ -336,13 +336,13 @@ class encypthion_class:
                                     #print(len(size_data2))
                                     
                                     long_Stop=len(size_data12)
-                                    if long_Start<long_Stop or cout_compress==15 or long_Stop<=320:
+                                    if long_Start<long_Stop or cout_compress==(2**24)-1 or long_Stop<=320:
                                         count_times_stop=1
                                         
                                    
                                     
                                     
-                                cout_compress=format(cout_compress,'04b')
+                                cout_compress=format(cout_compress,'024b')
                                
                                 size_data11=cout_compress+"1"+size_data3
                                 
