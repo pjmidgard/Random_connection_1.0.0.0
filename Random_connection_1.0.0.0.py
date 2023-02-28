@@ -228,7 +228,7 @@ class encypthion_class:
                                                     #print(Number_Times)
                                                   
                                                     Equal_Not_compress=format(Number_Times,'04b')
-                                                    Number_TimesE=format(Times//4,'04b')
+                                                    Number_TimesE=format((Times//4)-1,'04b')
                                                     if opssite_equal==1 and Calculus[Times+3:Times+4]=="1" and Calculus[Times+4:Times+5]==Equal_Not_compress[3:4] and Calculus[Times2+3:Times2+4]=="0" and Number_Times>-1 and Number_Times<16  and Times//4>-1 and Times//4<16:
 
                             
