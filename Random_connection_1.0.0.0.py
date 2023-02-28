@@ -228,12 +228,12 @@ class encypthion_class:
                                                     #print(Number_Times)
                                                     Change=Calculus[Times:Times+4]
                                                     Equal_Not_compress=format(Number_Times,'04b')
-                                                    if opssite_equal==1 and Calculus[Times2:Times2+3]=="000" and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16 or opssite_equal==2 and Calculus[Times2:Times2+3]=="111" and Calculus[Times2+4:Times4+5]!=Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16:
+                                                    if opssite_equal==1 and Calculus[Times2:Times2+3]=="000" and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16 or opssite_equal==2 and Calculus[Times2:Times2+3]=="111" and Calculus[Times2+4:Times2+5]!=Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16:
 
                                                         compress4=1
                                                         save_05=Equal_Not_compress[:3]+Calculus2[Times2+4:Times2+5]+Calculus2[:Times2]+Calculus2[Times2+5:80]
                                                         
-                                                    elif opssite_equal==2 and Calculus[Times2:Times2+3]=="000" and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16 or opssite_equal==1 and Calculus[Times2:Times2+3]=="111" and Calculus[Times2+4:Times4+5]!=Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16:
+                                                    elif opssite_equal==2 and Calculus[Times2:Times2+3]=="000" and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16 or opssite_equal==1 and Calculus[Times2:Times2+3]=="111" and Calculus[Times2+4:Times2+5]!=Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16:
                                                         
                                                         compress4=1
                                                         compress6=1
