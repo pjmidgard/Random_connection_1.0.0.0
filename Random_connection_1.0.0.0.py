@@ -306,14 +306,15 @@ class encypthion_class:
                                    
                                     
                                     
-                                cout_compress=format(cout_compress,'024b')
+                                cout_compress1=format(cout_compress,'024b')
                                
-                                size_data11=cout_compress+"1"+size_data3
+                                size_data11="1"+size_data3
+                                #print(cout_compress1)
                                 
                                 lenf=len(size_data11)
                                             
                                 add_bits118=""
-                                count_bits=8-(lenf-1)%8
+                                count_bits=8-lenf%8
                                 z=0
                                         
                                 if count_bits!=8:
@@ -322,7 +323,7 @@ class encypthion_class:
                                         z=z+1
                                                                         
                                                                         
-                                size_data11=add_bits118+size_data11
+                                size_data11=cout_compress1+add_bits118+size_data11
                                 
                                 
                                 
