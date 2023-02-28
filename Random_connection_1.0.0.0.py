@@ -175,9 +175,9 @@ class encypthion_class:
                                 cout_compress=0
                                 opssite_equal=1
                                 count_times_stop=0
-                                while cout_compress!=1:
+                                while count_times_stop!=1:
                                     cout_compress+=1
-                                    compress_stop=0
+                                    long_Start=len(size_data2)
                                     #print(cout_compress)
                                   
                                  
@@ -237,14 +237,14 @@ class encypthion_class:
                                                         compress6=1
 
 
-                                                        if compress_start==0:
+                                                        
                                                            
                                                       
-                                                           save_05=Equal_Not_compress[:3]+Calculus2[Times2+4:Times2+5]+Calculus2[:Times2]+Calculus2[Times2+5:80]
+                                                        save_05=Equal_Not_compress[:3]+Calculus2[Times2+4:Times2+5]+Calculus2[:Times2]+Calculus2[Times2+5:80]
                                                            
                                                            
-                                                           compress2=1
-                                                           compress_start=1
+                                                        compress2=1
+                                                        compress_start=1
                                                         
                                                     else:
                                                         save_05=Calculus2[:80]
@@ -274,21 +274,20 @@ class encypthion_class:
                                                             compress5=1
                                                             compress7=1
 
-                                                            if compress_start2==0 and compress2==1:
+                                                            
                                                                
                                                                 
-                                                               save_03=save_05+Equal_Not_compress[:3]+Calculus2[Times4+4:Times4+5]+Calculus2[80:Times4]+Calculus2[Times4+5:]
+                                                            save_03=save_05+Equal_Not_compress[:3]+Calculus2[Times4+4:Times4+5]+Calculus2[80:Times4]+Calculus2[Times4+5:]
                                                                #print(len(save_03))
                                                             
                                                                
-                                                               compress=1
-                                                               compress3=1
-                                                               compress_start2=1
+                                                            compress=1
+                                                            compress3=1
+                                                            compress_start2=1
                                                                 
-                                                        else:
-                                                            save_03=save_05+Calculus2[80:]
                                                         
-                                        if compress4==1 and compress5==1 and compress6==0 and compress7==0 and compress_stop==0:
+                                                        
+                                        if compress4==1 and compress5==1 and compress6==1 and compress7==0:
                                             save_04="10"+save_03
                                 
                                             size_data12=size_data12+save_04
@@ -296,49 +295,35 @@ class encypthion_class:
                                         
 	                                                    
 
-                                        elif compress3==1 and compress4==1 and compress6==1 and compress7==1 and compress7==1 and compress_stop==0:
+                                        elif compress4==1 and compress5==1 and compress6==1 and compress7==1:
 
                                             save_04="0"+save_03
                                             #print(len(save_03))
                                             size_data12=size_data12+save_04
                                             
                                         
-                                        elif compress4==1 and compress5==0 and compress6==1 and compress7==0 and compress_stop==0:
-                                            Stop=""
-                                            if compress_stop==0:
-                                                
-                                                Stop="110"
-                                            save_04=Stop+save_03
+                                        else:
+                                            
+                                            not_compress="11"
+                                            save_04=not_compress+save_03
                                             #print(len(save_04))
                                             size_data12=size_data12+save_04
                                         
-                                        elif compress4==0 and compress5==1 and compress6==0 and compress7==1 and compress_stop==0:
-                                           
-                                            #print(len(save_04))
-                                            #print(compress4)
-                                            Stop="1110"
-                                            save_04=Stop+save_03
-                                            #print(len(save_04))
-                                            size_data12=size_data12+save_04
-                                        else:
-                                            Stop="1111"
-                                            save_04=Stop+Calculus2
-                                            #print(len(save_04))
-                                            size_data12=size_data12+save_04
-                                            
-                                     
-
+                                        
                                     size_data2=size_data12[::-1]
-                                    print(len(size_data2))
+                                    #print(len(size_data2))
                                     opssite_equal+=1
                                     if opssite_equal==3:
                                     	opssite_equal=1
-                                    
+                                    long_Stop=len(size_data12)
+                                    if long_Start<long_Stop or cout_compress==65535:
+                                        count_times_stop=1
+                                        
                                    
                                     
                                     
-                             
-                                size_data11=size_data12
+                                cout_compress=format(cout_compress,'016b')
+                                size_data11=cout_compress+"1"+size_data12
                                 
                                 lenf=len(size_data11)
                                             
