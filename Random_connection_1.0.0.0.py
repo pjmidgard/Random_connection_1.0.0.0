@@ -349,10 +349,10 @@ class encypthion_class:
                                 lenf=len(size_data11)
                                             
                                 add_bits118=""
-                                count_bits=7-(lenf-1)%8
+                                count_bits=8-(lenf-1)%8
                                 z=0
                                         
-                                if count_bits!=7:
+                                if count_bits!=8:
                                     while z<count_bits:
                                         add_bits118="0"+add_bits118
                                         z=z+1
