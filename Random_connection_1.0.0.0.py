@@ -332,7 +332,7 @@ class encypthion_class:
 
                                         
                                     size_data2=size_data12[::-1]
-                                    print(len(size_data2))
+                                    #print(len(size_data2))
                                     
                                     long_Stop=len(size_data12)
                                     if long_Start<long_Stop or cout_compress==15 or long_Stop<=320:
