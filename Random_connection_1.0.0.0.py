@@ -224,7 +224,7 @@ class encypthion_class:
                                             Times2=-4
                                             while Times2!=76:
                                                 Times2+=4
-                                                if Times>=0 and Times2>=0 and Calculus[Times:Times+4]!=Calculus[Times2:Times2+4] and Times2!=Times:
+                                                if Times>=0 and Times2>=0 and Calculus[Times:Times+3]!=Calculus[Times2:Times2+3] and Times2!=Times:
                                                     Number_Times=-((Times//4)-(Times2//4))-1
                                                     #print(Number_Times)
                                                     Change=Calculus[Times:Times+4]
@@ -266,7 +266,7 @@ class encypthion_class:
                                                     
                                                 while Times4!=156:
                                                     Times4+=4
-                                                    if Times3>=80 and Times4>=80 and Calculus[Times3:Times3+4]!=Calculus[Times4:Times4+4] and Times4!=Times3:
+                                                    if Times3>=80 and Times4>=80 and Calculus[Times3:Times3+3]!=Calculus[Times4:Times4+3] and Times4!=Times3:
                                                         Number_Times=-((Times3//4)-(Times4//4))-1
                                                         Change=Calculus[Times3:Times3+4]
                                                         Equal_Not_compress=format(Number_Times,'04b')
