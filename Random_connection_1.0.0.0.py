@@ -277,7 +277,7 @@ class encypthion_class:
                                                             
                                                             
                                                                 
-                                                            save_03=save_05+Equal_Not_compress[:3]+Number_TimesE[:3]+Calculus2[80:Times2]+Calculus2[Times3+4:Times4]+Calculus2[Times4+4:Times4+5]+Calculus2[Times4+5:]
+                                                            save_03=save_05+Equal_Not_compress[:3]+Number_TimesE[:3]+Calculus2[80:Times3]+Calculus2[Times3+4:Times4]+Calculus2[Times4+4:Times4+5]+Calculus2[Times4+5:]
                                                             if len(save_03)==156:
                                                                 compress5=1
                                                                 
@@ -287,7 +287,7 @@ class encypthion_class:
                                                             
                                                                
                                                             
-                                                            save_03=save_05+Equal_Not_compress[:3]+Number_TimesE[:3]+Calculus2[80:Times2]+Calculus2[Times3+4:Times4]+Calculus2[Times4+4:Times4+5]+Calculus2[Times4+5:]
+                                                            save_03=save_05+Equal_Not_compress[:3]+Number_TimesE[:3]+Calculus2[80:Times3]+Calculus2[Times3+4:Times4]+Calculus2[Times4+4:Times4+5]+Calculus2[Times4+5:]
                                                             
                                                             
                                                             if len(save_03)==156:
@@ -312,7 +312,7 @@ class encypthion_class:
                                         elif compress4==1 and compress5==1 and compress6==1 and compress7==1 and compress_stop==0:
 
                                             save_04="0"+save_03
-                                            #print(len(save_03))
+                                            #print(len(save_04))
                                             size_data12=size_data12+save_04
                                             
                                         
@@ -320,6 +320,11 @@ class encypthion_class:
                                             not_compress=""
                                             if compress_stop==0:
                                                 not_compress="11"
+                                            if compress_stop>=0:
+                                                compress_stop+=1
+                                                
+                                            if  compress_stop==5:
+                                                compress_stop=0
                                                 
                                             save_04=not_compress+Calculus2
                                             #print(len(save_04))
