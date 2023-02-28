@@ -229,7 +229,7 @@ class encypthion_class:
                                                     #print(Number_Times)
                                                     Change=Calculus[Times:Times+4]
                                                     Equal_Not_compress=format(Number_Times,'04b')
-                                                    Number_TimesE=format(Number_Times,'04b')
+                                                    Number_TimesE=format(Times//4,'04b')
                                                     if opssite_equal==1 and Calculus[Times:Times+3]=="111" and Calculus[Times+4:Times+5]==Equal_Not_compress[3:4] and Calculus[Times2:Times2+3]=="000" and Number_Times>-1 and Number_Times<16  and Times//4>1 and Times//4<16 :
 
                             
@@ -237,7 +237,7 @@ class encypthion_class:
                                                         if len(save_05)==78:
                                                             compress4=1
                                                             
-                                                    elif opssite_equal==1 and Calculus[Times:Times+3]=="000" and Calculus[Times+4:Times+5]==Equal_Not_compress[3:4] and Calculus[Times2:Times2+3]=="111" and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16 and Times//4>1 and Times//4<16:
+                                                    elif opssite_equal==1 and Calculus[Times:Times+3]=="000" and Calculus[Times+4:Times+5]==Equal_Not_compress[3:4] and Calculus[Times2:Times2+3]=="111" and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16 and Times3//4>1 and Times3//4<16:
                                                         
                                                         
 
@@ -270,7 +270,7 @@ class encypthion_class:
                                                         Number_Times=-((Times3//4)-(Times4//4))-1
                                                         Change=Calculus[Times3:Times3+4]
                                                         Equal_Not_compress=format(Number_Times,'04b')
-                                                        Number_TimesE=format(Number_Times,'04b')
+                                                        Number_TimesE=format(Times3//4,'04b')
 
                                                         if opssite_equal==1 and Calculus[Times3:Times3+3]=="111" and Calculus[Times3+4:Times3+5]==Equal_Not_compress[3:4] and Calculus[Times4:Times4+3]=="000" and Calculus[Times4+4:Times4+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16  and Times//4>1 and Times//4<16 or opssite_equal==2 and Calculus[Times:Times+3]=="000" and Calculus[Times+4:Times+5]==Equal_Not_compress[3:4] and Calculus[Times2:Times2+3]=="000" and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16 and Times//4>1 and Times//4<16:
                                                             
