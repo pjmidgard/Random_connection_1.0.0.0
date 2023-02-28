@@ -175,10 +175,10 @@ class encypthion_class:
                                 cout_compress=0
                                 opssite_equal=1
                                 count_times_stop=0
-                                compress_stop=0
+                             
                                 while count_times_stop!=1:
                                     cout_compress+=1
-                                    compress_stop=0
+                                   
                                     long_Start=len(size_data2)
                                     size_data3=size_data2
                                     #print(cout_compress)
@@ -200,8 +200,7 @@ class encypthion_class:
                                         block+=blocks
                                         Times=-4
                                         Times2=-4
-                                        Times3=76
-                                        Times4=76
+                                      
                                         compress=0
                                         compress2=0
                                         compress3=0
@@ -227,7 +226,7 @@ class encypthion_class:
                                                 if Times>=0 and Times2>=0 and Calculus[Times:Times+3]!=Calculus[Times2:Times2+3] and Calculus[Times:Times+3]=="111" and Calculus[Times2:Times2+3]=="000" and Times2!=Times:
                                                     Number_Times=-((Times//4)-(Times2//4))-1
                                                     #print(Number_Times)
-                                                    Change=Calculus[Times:Times+4]
+                                                  
                                                     Equal_Not_compress=format(Number_Times,'04b')
                                                     Number_TimesE=format(Times//4,'04b')
                                                     if opssite_equal==1 and Calculus[Times+3:Times+4]=="1" and Calculus[Times+4:Times+5]==Equal_Not_compress[3:4] and Calculus[Times2+3:Times2+4]=="0" and Number_Times>-1 and Number_Times<16  and Times//4>-1 and Times//4<16:
@@ -238,7 +237,7 @@ class encypthion_class:
                                                             #print(save_05)
                                                             compress4=1
                                                             
-                                                    if opssite_equal==1 and Calculus[Times+3:Times+4]=="0" and Calculus[Times+4:Times+5]==Equal_Not_compress[3:4] and Calculus[Times2+3:Times2+4]=="1" and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16 and Times3//4>-1 and Times3//4<16:
+                                                    if opssite_equal==1 and Calculus[Times+3:Times+4]=="0" and Calculus[Times+4:Times+5]==Equal_Not_compress[3:4] and Calculus[Times2+3:Times2+4]=="1" and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] and Number_Times>-1 and Number_Times<16 and Times//4>-1 and Times//4<16:
                                                         
                                                         
 
@@ -246,7 +245,7 @@ class encypthion_class:
                                                         
                                                            
                                                       
-                                                        save_05=Equal_Not_compress[:3]+Number_TimesE[:3]+Calculus2[:Times]+Calculus2[Times+4:Times+5]+ alculus2[Times+5:Times2]+Calculus2[Times2+4:Times2+5]+Calculus2[Times2+5:80]
+                                                        save_05=Equal_Not_compress[:3]+Number_TimesE[:3]+Calculus2[:Times]+Calculus2[Times+4:Times+5]+Calculus2[Times+5:Times2]+Calculus2[Times2+4:Times2+5]+Calculus2[Times2+5:80]
 
                                                         
                                                         if len(save_05)==78:   
@@ -265,7 +264,7 @@ class encypthion_class:
                                                                 
                                                         
                                           
-                                        if compress4==0 and compress6==1 and compress_stop==0:
+                                        if compress4==0 and compress6==1:
                                             save_04="10"+save_03
                                         
                                 
@@ -274,7 +273,7 @@ class encypthion_class:
                                         
 	                                                    
 
-                                        elif compress4==1 and compress6==0 and compress_stop==0:
+                                        elif compress4==1 and compress6==0:
 
                                             save_04="0"+save_03
                                             #print(len(save_04))
