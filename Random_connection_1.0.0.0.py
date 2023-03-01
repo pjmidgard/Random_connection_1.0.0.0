@@ -190,7 +190,7 @@ class encypthion_class:
                                     size_data11=""
 
                                     block=0
-                                    blocks=128
+                                    blocks=16
                                     Calculus=""
                                     not_compres_file=0
                                     while block<long:
@@ -218,26 +218,26 @@ class encypthion_class:
                                         Check=0
                                         Number_Times2=-1
 
-                                        while Times!=127:
+                                        while Times!=14:
                                             Times+=1
                                             Times2=-1
-                                            while Times2!=127:
+                                            while Times2!=14:
                                                 Times2+=1
                                                 if Times>=0 and Times2>=0 and Calculus[Times:Times+1]!=Calculus[Times2:Times2+1] and Times2!=Times:
                                                     Number_Times=-((Times//1)-(Times2//1))-1
                                                     #print(Number_Times)
                                                   
                                                     Equal_Not_compress=format(Number_Times,'04b')
-                                                    Number_TimesE=format((Times//4)-1,'04b')
-                                                    if opssite_equal==1 and Calculus[Times:Times+4]=="1111" and Calculus[Times+4:Times+5]==Equal_Not_compress[3:4] and Calculus[Times2:Times2+4]=="0000" and Number_Times>0 and Number_Times<16  and Times//4>0 and Times//4<16:
+                                                    Number_TimesE=format((Times//1)-1,'04b')
+                                                    if opssite_equal==1 and Calculus[Times:Times+4]=="1111" and Calculus[Times+4:Times+5]==Equal_Not_compress[3:4] and Calculus[Times2:Times2+4]=="0000" and Number_Times>0 and Number_Times<16  and Times//1>0 and Times//1<16:
 
                             
                                                         save_05=Equal_Not_compress[:3]+Calculus2[Times+4:Times+5]+Number_TimesE[:3]+Calculus2[Times2+4:Times2+5]+Calculus2[:Times]+Calculus2[Times+5:Times2]+Calculus2[Times2+5:]
-                                                        if len(save_05)==126:
+                                                        if len(save_05)==14:
                                                             #print(save_05)
                                                             compress4=1
                                                             
-                                                    if opssite_equal==1 and Calculus[Times:Times+4]=="0000" and Calculus[Times+4:Times+5]==Equal_Not_compress[3:4] and Calculus[Times2:Times2+4]=="1111" and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] and Number_Times>0 and Number_Times<16 and Times//4>0 and Times//4<16:
+                                                    if opssite_equal==1 and Calculus[Times:Times+4]=="0000" and Calculus[Times+4:Times+5]==Equal_Not_compress[3:4] and Calculus[Times2:Times2+4]=="1111" and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] and Number_Times>0 and Number_Times<16 and Times//1>0 and Times//1<16:
                                                         
                                                         
 
@@ -249,7 +249,7 @@ class encypthion_class:
                                                         
 
                                                         #print(len(save_05))
-                                                        if len(save_05)==126:   
+                                                        if len(save_05)==14:   
                                                             compress2=1
                                                             compress_start=1
                                                             #print(save_05)
@@ -265,7 +265,7 @@ class encypthion_class:
                                                                 
                                                         
                                           
-                                        if compress4==0 and compress6==1:
+                                        if compress4==0 and compress6==1 and len(save_05)==14:
                                             save_04="10"+save_05
                                         
                                 
@@ -274,18 +274,16 @@ class encypthion_class:
                                         
 	                                                    
 
-                                        elif compress4==1 and compress6==0:
+                                        elif compress4==1 and compress6==0 and len(save_05)==14:
 
                                             save_04="0"+save_05
-                                            #print(len(save_04))
+                                            #print(save_04)
                                             size_data12=size_data12+save_04
                                             
                                         
                                         else:
-                                            not_compress="11"
-                                         
-                                                
-                                            save_04=not_compress+Calculus2
+                                             
+                                            save_04=Calculus2
                                             #print(save_04)
                                             size_data12=size_data12+save_04
 
@@ -294,7 +292,7 @@ class encypthion_class:
                                     #print(len(size_data2))
                                     
                                     long_Stop=len(size_data12)
-                                    if long_Start<long_Stop or cout_compress==(2**24)-1 or long_Stop<=320:
+                                    if long_Start<=long_Stop or cout_compress==(2**24)-1 or long_Stop<=320:
                                         count_times_stop=1
                                         
                                    
