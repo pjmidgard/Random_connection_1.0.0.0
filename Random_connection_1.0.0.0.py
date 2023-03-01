@@ -218,10 +218,10 @@ class encypthion_class:
                                         Check=0
                                         Number_Times2=-1
 
-                                        while Times!=14:
+                                        while Times!=15:
                                             Times+=1
                                             Times2=-1
-                                            while Times2!=14:
+                                            while Times2!=15:
                                                 Times2+=1
                                                 if Times>=0 and Times2>=0 and Calculus[Times:Times+1]!=Calculus[Times2:Times2+1] and Times2!=Times:
                                                     Number_Times=-((Times//1)-(Times2//1))-1
