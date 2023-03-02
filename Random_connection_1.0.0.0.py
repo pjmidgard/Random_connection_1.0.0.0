@@ -217,8 +217,9 @@ class encypthion_class:
                                               save_01="0"+save_00+save_00
                                               size_data12=size_data12+save_01
                                               #print(len(save_01))
-                                        elif Calculus[0:4]==Calculus[0:8]:
+                                        elif Calculus[1:5]==Calculus[5:9] and Calculus[0:1]=="0":
                                             save_01="1"+Calculus
+                                        
                                             size_data12=size_data12+save_01
                                         
                                         else:
@@ -231,7 +232,7 @@ class encypthion_class:
 
                                         
                                     size_data2=size_data12[::-1]
-                                    #print(len(size_data2))
+                                    print(len(size_data2))
                                     
                                     long_Stop=len(size_data12)
                                     if long_Start<=long_Stop or cout_compress==(2**24)-1 or long_Stop<=320:
