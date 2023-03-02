@@ -171,11 +171,15 @@ class encypthion_class:
 
                                     lenf3=len(size_data2)
                                 lenf2=len(size_data2)
-                                print(lenf2)
+                                #print(lenf2)
                                 cout_compress=0
                                 opssite_equal=1
                                 count_times_stop=0
-                             
+                                not_compres_file=0
+                                size_data3=""
+                                size_data4=""
+                            
+                                size_data4=size_data2
                                 while count_times_stop!=1:
                                     cout_compress+=1
                                     Stop_compress=0
@@ -191,9 +195,12 @@ class encypthion_class:
                                     size_data11=""
 
                                     block=0
-                                    blocks=11
+                                    blocks=10
                                     Calculus=""
-                                    not_compres_file=0
+                                    save_03=""
+                                    blocks1=9
+                                    block1=0
+                                    
                                     while block<long:
                                         long=len(size_data2)
                                         Calculus=size_data2[block:block+blocks]
@@ -204,6 +211,7 @@ class encypthion_class:
                                         save_00=""
                                         save_01=""
                                         save_02=""
+                                        
                                         block+=blocks
 
                                         
@@ -213,17 +221,25 @@ class encypthion_class:
                                         Zero_one_divide_result_second_back=Zero_one_divide_result_second+1
                                           
                                         if Zero_one_divide_result_second_back==Zero_one_divide and Zero_one_divide_result<2**4:
+                                            
                                               save_00=format(Zero_one_divide_result,'04b')
-                                              save_01="00"+save_00+save_00
+                                              save_01="0"+save_00+save_00
                                               size_data12=size_data12+save_01
-                                              #print(len(save_01))
-                                        elif Calculus[1:5]==Calculus[5:9] and Calculus[0:1]=="0":
-                                            save_01="01"+Calculus[1:5]+"1"+Calculus[6:]
+                                              
+                                              
+                                              save_03=save_03+save_01
                                         
-                                            size_data12=size_data12+save_01
                                         
                                         else:
+                                            long1=len(save_03)
+                                            while block1<long1:
+                                                
+                                                Calculus1=save_03[block1:block+blocks1]
+                                                block1+=blocks1
                                             
+                                                if Calculus1[0:9]==Calculus[0:9]:
+                                                    not_compres_file=1
+                                                    
                                             save_01=Calculus
                                             size_data12=size_data12+save_01
                                             #print(Zero_one_divide_result_second_back)
@@ -232,7 +248,7 @@ class encypthion_class:
 
                                         
                                     size_data2=size_data12[::-1]
-                                    print(len(size_data2))
+                                    #print(len(size_data2))
                                     
                                     long_Stop=len(size_data12)
                                     if long_Start<=long_Stop or cout_compress==(2**24)-1 or long_Stop<=320:
@@ -242,8 +258,10 @@ class encypthion_class:
                                     
                                     
                                 cout_compress1=format(cout_compress,'024b')
-                               
-                                size_data11="1"+size_data12
+                                if not_compres_file==0:
+                                    size_data11="10"+size_data12
+                                elif not_compres_file==1:
+                                    size_data11="11"+size_data4
                                 #print(cout_compress1)
                                 
                                 lenf=len(size_data11)
