@@ -191,7 +191,7 @@ class encypthion_class:
                                     size_data11=""
 
                                     block=0
-                                    blocks=10
+                                    blocks=11
                                     Calculus=""
                                     not_compres_file=0
                                     while block<long:
@@ -214,7 +214,7 @@ class encypthion_class:
                                           
                                         if Zero_one_divide_result_second_back==Zero_one_divide and Zero_one_divide_result<2**4:
                                               save_00=format(Zero_one_divide_result,'04b')
-                                              save_01="0"+save_00+save_00
+                                              save_01="00"+save_00+save_00
                                               size_data12=size_data12+save_01
                                               #print(len(save_01))
                                         elif Calculus[1:5]==Calculus[5:9] and Calculus[0:1]=="0":
