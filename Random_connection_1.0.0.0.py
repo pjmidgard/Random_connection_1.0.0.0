@@ -218,7 +218,7 @@ class encypthion_class:
                                               size_data12=size_data12+save_01
                                               #print(len(save_01))
                                         elif Calculus[1:5]==Calculus[5:9] and Calculus[0:1]=="0":
-                                            save_01="1"+Calculus
+                                            save_01="01"+Calculus[1:5]+"1"+Calculus[6:]
                                         
                                             size_data12=size_data12+save_01
                                         
