@@ -171,13 +171,14 @@ class encypthion_class:
 
                                     lenf3=len(size_data2)
                                 lenf2=len(size_data2)
-                                #print(lenf2)
+                                print(lenf2)
                                 cout_compress=0
                                 opssite_equal=1
                                 count_times_stop=0
                              
                                 while count_times_stop!=1:
                                     cout_compress+=1
+                                    Stop_compress=0
                                    
                                     long_Start=len(size_data2)
                                     size_data3=size_data2
@@ -190,102 +191,43 @@ class encypthion_class:
                                     size_data11=""
 
                                     block=0
-                                    blocks=16
+                                    blocks=10
                                     Calculus=""
                                     not_compres_file=0
                                     while block<long:
                                         long=len(size_data2)
                                         Calculus=size_data2[block:block+blocks]
-                                        Calculus2=size_data2[block:block+blocks]
-                                        block+=blocks
-                                        Times=-1
-                                        Times2=-1
-                                      
-                                        compress=0
-                                        compress2=0
-                                        compress3=0
-                                        compress4=0
-                                        compress5=0
-                                        compress6=0
-                                        compress7=0
-                                        compress_start=0
-                                        compress_start2=0
+                                        Zero_one_divide=0
+                                        Zero_one_divide_result=0
+                                        Zero_one_divide_result_second=0
+                                        Zero_one_divide_result_second_back=0
                                         save_00=""
                                         save_01=""
-                                        save_03=""
-                                        save_04=""
-                                        save_05=""
-                                        Check=0
-                                        Number_Times2=-1
+                                        save_02=""
+                                        block+=blocks
 
-                                        while Times!=15:
-                                            Times+=1
-                                            Times2=-1
-                                            while Times2!=15:
-                                                Times2+=1
-                                                if Times>=0 and Times2>=0 and Calculus[Times:Times+1]!=Calculus[Times2:Times2+1] and Times2!=Times:
-                                                    Number_Times=-((Times//1)-(Times2//1))-1
-                                                    #print(Number_Times)
-                                                  
-                                                    Equal_Not_compress=format(Number_Times,'04b')
-                                                    Number_TimesE=format((Times//1)-1,'04b')
-                                                    if opssite_equal==1 and Calculus[Times:Times+4]=="1111" and Calculus[Times+4:Times+5]==Equal_Not_compress[3:4] and Calculus[Times2:Times2+4]=="0000" and Number_Times>0 and Number_Times<16  and Times//1>0 and Times//1<16:
-
-                            
-                                                        save_05=Equal_Not_compress[:3]+Calculus2[Times+4:Times+5]+Number_TimesE[:3]+Calculus2[Times2+4:Times2+5]+Calculus2[:Times]+Calculus2[Times+5:Times2]+Calculus2[Times2+5:]
-                                                        if len(save_05)==14:
-                                                            #print(save_05)
-                                                            compress4=1
-                                                            
-                                                    if opssite_equal==1 and Calculus[Times:Times+4]=="0000" and Calculus[Times+4:Times+5]==Equal_Not_compress[3:4] and Calculus[Times2:Times2+4]=="1111" and Calculus[Times2+4:Times2+5]==Equal_Not_compress[3:4] and Number_Times>0 and Number_Times<16 and Times//1>0 and Times//1<16:
-                                                        
-                                                        
-
-
-                                                        
-                                                           
-                                                      
-                                                        save_05=Equal_Not_compress[:3]+Calculus2[Times+4:Times+5]+Number_TimesE[:3]+Calculus2[Times2+4:Times2+5]+Calculus2[:Times]+Calculus2[Times+5:Times2]+Calculus2[Times2+5:]
-                                                        
-
-                                                        #print(len(save_05))
-                                                        if len(save_05)==14:   
-                                                            compress2=1
-                                                            compress_start=1
-                                                            #print(save_05)
-                                                            
-                                                            compress6=1
-                                                            #print(len(save_05)) 
-                                                        
-                                                    
                                         
-
-                                            
-                                                                #print(len(save_03))
-                                                                
-                                                        
+                                        Zero_one_divide=int(Calculus,2)
+                                        Zero_one_divide_result=Zero_one_divide//32
+                                        Zero_one_divide_result_second=Zero_one_divide_result*32
+                                        Zero_one_divide_result_second_back=Zero_one_divide_result_second+1
                                           
-                                        if compress4==0 and compress6==1 and len(save_05)==14:
-                                            save_04="10"+save_05
-                                        
-                                
-                                            size_data12=size_data12+save_04
-                                            #print(len(save_04))
-                                        
-	                                                    
-
-                                        elif compress4==1 and compress6==0 and len(save_05)==14:
-
-                                            save_04="0"+save_05
-                                            #print(save_04)
-                                            size_data12=size_data12+save_04
-                                            
+                                        if Zero_one_divide_result_second_back==Zero_one_divide and Zero_one_divide_result<2**4:
+                                              save_00=format(Zero_one_divide_result,'04b')
+                                              save_01="0"+save_00+save_00
+                                              size_data12=size_data12+save_01
+                                              #print(len(save_01))
+                                        elif Calculus[0:4]==Calculus[0:8]:
+                                            save_01="1"+Calculus
+                                            size_data12=size_data12+save_01
                                         
                                         else:
+                                            
+                                            save_01=Calculus
+                                            size_data12=size_data12+save_01
+                                            #print(Zero_one_divide_result_second_back)
+                                            #print(Zero_one_divide)
                                              
-                                            save_04=Calculus2
-                                            #print(save_04)
-                                            size_data12=size_data12+save_04
 
                                         
                                     size_data2=size_data12[::-1]
