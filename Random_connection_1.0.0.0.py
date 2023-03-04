@@ -230,14 +230,15 @@ class encypthion_class:
                                              
                                               size_data12=size_data12+"0"+save_00+save_00
                                               save_03=save_00
-                                              save_04+=save_00
+                                              save_04+="0"+save_00
                                               
                                              
                                         
                                         
                                         else:
                                             if   Calculus[0:1]=="0" and Calculus[1:3]==Calculus[3:5] and save_03==Calculus[1:3]:
-                                            	    not_compres_file=1
+                                            	    save_04+="1"
+                                            	    
                                             	    
                                             	    
                                                  
@@ -265,10 +266,8 @@ class encypthion_class:
                                 cout_compress_long=len(save_04) 
                                 cout_compress2=format(cout_compress_long,'048b') 
                                 cout_compress1=format(cout_compress,'024b')
-                                if not_compres_file==0:
-                                	size_data11="10"+cout_compress2+save_04+size_data12
-                                if not_compres_file==1:
-                                	size_data11="11"+size_data4
+                                size_data11="1"+cout_compress2+save_04+size_data12
+                          
                                 #print(cout_compress1)
                                 
                                 lenf=len(size_data11)
