@@ -214,7 +214,7 @@ class encypthion_class:
                                         save_00=""
                                         save_01=""
                                         save_02=""
-                                        save_03=""
+                                        
                                         
                                         block+=blocks
 
@@ -239,6 +239,8 @@ class encypthion_class:
                                             if   Calculus[0:1]=="0" and Calculus[1:3]==Calculus[3:5] and save_03==Calculus[1:3]:
                                             	    save_04+="1"
                                             	    
+                                            	    save_03=""
+                                            	    
                                             	    
                                             	    
                                                  
@@ -257,15 +259,15 @@ class encypthion_class:
                                     #print(len(size_data2))
                                     
                                     long_Stop=len(size_data12)
-                                    if long_Stop>=long_Start or cout_compress==(2**24)-1 or long_Stop<=22 or cout_compress_long1>(2**44):
+                                    if long_Stop>=long_Start or cout_compress==(2**16)-1 or long_Stop<=22 or cout_compress_long1>(2**30):
                                         count_times_stop=1
                                         
                                    
                                     
                                     
                                 cout_compress_long=len(save_04) 
-                                cout_compress2=format(cout_compress_long,'048b') 
-                                cout_compress1=format(cout_compress,'024b')
+                                cout_compress2=format(cout_compress_long,'032b') 
+                                cout_compress1=format(cout_compress,'016b')
                                 size_data11="1"+cout_compress2+save_04+size_data12
                           
                                 #print(cout_compress1)
