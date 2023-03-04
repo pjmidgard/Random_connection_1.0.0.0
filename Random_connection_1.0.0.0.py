@@ -256,7 +256,7 @@ class encypthion_class:
                                     
                                     
                                 cout_compress_long=len(save_03) 
-                                cout_compress2=format(cout_compress_long,'024b') 
+                                cout_compress2=format(cout_compress_long,'048b') 
                                 cout_compress1=format(cout_compress,'08b')
                                 
                                 size_data11=cout_compress2+save_03+"1"+size_data12
