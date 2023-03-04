@@ -233,12 +233,13 @@ class encypthion_class:
                                         
                                         
                                         else:
-                                            if Calculus[1:5]==Calculus[5:9] and Calculus[0:1]=="0":
-                                                  save_03+="10"
+                                            if   Calculus[0:1]=="0":
+                                                  save_03+="1"
+                                                  Calculus="0"+Calculus[1:]
                                                   
                                                     
-                                            save_01=Calculus[5:]
-                                            save_03+="11"
+                                            save_01=Calculus
+                                            
                                             size_data12=size_data12+save_01
                                             #print(Zero_one_divide_result_second_back)
                                             #print(Zero_one_divide)
@@ -246,10 +247,10 @@ class encypthion_class:
 
                                         
                                     size_data2=size_data12[::-1]
-                                    #print(len(size_data2))
+                                    print(len(size_data2))
                                     
                                     long_Stop=len(size_data12)
-                                    if cout_compress==(2**8)-1 or long_Stop<=22:
+                                    if long_Stop>=long_Start or cout_compress==(2**8)-1 or long_Stop<=22:
                                         count_times_stop=1
                                         
                                    
