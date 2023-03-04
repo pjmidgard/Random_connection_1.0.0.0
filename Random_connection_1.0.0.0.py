@@ -179,6 +179,7 @@ class encypthion_class:
                                 size_data3=""
                                 size_data4=""
                                 save_03=""
+                                save_04=""
                                 cout_compress2=""
                             
                                 size_data4=size_data2
@@ -213,6 +214,7 @@ class encypthion_class:
                                         save_00=""
                                         save_01=""
                                         save_02=""
+                                        save_03=""
                                         
                                         block+=blocks
 
@@ -222,20 +224,23 @@ class encypthion_class:
                                         Zero_one_divide_result_second=Zero_one_divide_result*32
                                         Zero_one_divide_result_second_back=Zero_one_divide_result_second+1
                                           
-                                        if Zero_one_divide_result_second_back==Zero_one_divide and Zero_one_divide_result<2**4:
+                                        if Zero_one_divide_result_second_back==Zero_one_divide and Zero_one_divide_result<2**2:
                                             
-                                              save_00=format(Zero_one_divide_result,'04b')
+                                              save_00=format(Zero_one_divide_result,'02b')
                                              
-                                              size_data12=size_data12+save_00
+                                              size_data12=size_data12+"0"+save_00+save_00
+                                              save_03=save_00
+                                              save_04+=save_00
                                               
-                                              
-                                              save_03+="0"
+                                             
                                         
                                         
                                         else:
-                                            if   Calculus[0:1]=="0":
-                                                  save_03+="1"
-                                                  Calculus="0"+Calculus[1:]
+                                            if   Calculus[0:1]=="0" and Calculus[1:3]==Calculus[3:5] and save_03==Calculus[1:3]:
+                                            	    not_compres_file=1
+                                            	    
+                                            	    
+                                                 
                                                   
                                                     
                                             save_01=Calculus
@@ -247,20 +252,23 @@ class encypthion_class:
 
                                         
                                     size_data2=size_data12[::-1]
-                                    print(len(size_data2))
+                                    cout_compress_long1=len(save_04) 
+                                    #print(len(size_data2))
                                     
                                     long_Stop=len(size_data12)
-                                    if long_Stop>=long_Start or cout_compress==(2**8)-1 or long_Stop<=22:
+                                    if long_Stop>=long_Start or cout_compress==(2**8)-1 or long_Stop<=22 or cout_compress_long1>(2**8):
                                         count_times_stop=1
                                         
                                    
                                     
                                     
-                                cout_compress_long=len(save_03) 
-                                cout_compress2=format(cout_compress_long,'048b') 
+                                cout_compress_long=len(save_04) 
+                                cout_compress2=format(cout_compress_long,'016b') 
                                 cout_compress1=format(cout_compress,'08b')
-                                
-                                size_data11=cout_compress2+save_03+"1"+size_data12
+                                if not_compres_file==0:
+                                	size_data11="10"+cout_compress2+save_04+size_data12
+                                if not_compres_file==1:
+                                	size_data11="11"+size_data4
                                 #print(cout_compress1)
                                 
                                 lenf=len(size_data11)
