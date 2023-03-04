@@ -178,6 +178,8 @@ class encypthion_class:
                                 not_compres_file=0
                                 size_data3=""
                                 size_data4=""
+                                save_03=""
+                                cout_compress2=""
                             
                                 size_data4=size_data2
                                 while count_times_stop!=1:
@@ -197,7 +199,7 @@ class encypthion_class:
                                     block=0
                                     blocks=10
                                     Calculus=""
-                                    save_03=""
+                                    
                                     blocks1=9
                                     block1=0
                                     
@@ -227,18 +229,13 @@ class encypthion_class:
                                               size_data12=size_data12+save_01
                                               
                                               
-                                              save_03=save_03+save_01
+                                              save_03+="0"
                                         
                                         
                                         else:
-                                            long1=len(save_03)
-                                            while block1<long1:
-                                                
-                                                Calculus1=save_03[block1:block+blocks1]
-                                                block1+=blocks1
-                                            
-                                                if Calculus1[0:9]==Calculus[0:9]:
-                                                    not_compres_file=1
+                                            if Calculus[1:5]==Calculus[5:9] and Calculus[0:1]:
+                                                  save_03+="1"
+                                                  
                                                     
                                             save_01=Calculus
                                             size_data12=size_data12+save_01
@@ -251,17 +248,17 @@ class encypthion_class:
                                     #print(len(size_data2))
                                     
                                     long_Stop=len(size_data12)
-                                    if long_Start<=long_Stop or cout_compress==(2**24)-1 or long_Stop<=320:
+                                    if long_Start<=long_Stop or cout_compress==(2**8)-1 or long_Stop<=320:
                                         count_times_stop=1
                                         
                                    
                                     
                                     
-                                cout_compress1=format(cout_compress,'024b')
-                                if not_compres_file==0:
-                                    size_data11="10"+size_data12
-                                elif not_compres_file==1:
-                                    size_data11="11"+size_data4
+                                cout_compress_long=len(save_03) 
+                                cout_compress2=format(cout_compress_long,'024b') 
+                                cout_compress1=format(cout_compress,'08b')
+                                
+                                size_data11="1"+size_data4
                                 #print(cout_compress1)
                                 
                                 lenf=len(size_data11)
@@ -276,7 +273,7 @@ class encypthion_class:
                                         z=z+1
                                                                         
                                                                         
-                                size_data11=cout_compress1+add_bits118+size_data11
+                                size_data11=cout_compress2+save_03+cout_compress1+add_bits118+size_data11
                                 
                                 
                                 
