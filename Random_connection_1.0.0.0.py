@@ -225,19 +225,20 @@ class encypthion_class:
                                         if Zero_one_divide_result_second_back==Zero_one_divide and Zero_one_divide_result<2**4:
                                             
                                               save_00=format(Zero_one_divide_result,'04b')
-                                              save_01="0"+save_00+save_00
-                                              size_data12=size_data12+save_01
+                                             
+                                              size_data12=size_data12+save_00
                                               
                                               
                                               save_03+="0"
                                         
                                         
                                         else:
-                                            if Calculus[1:5]==Calculus[5:9] and Calculus[0:1]:
-                                                  save_03+="1"
+                                            if Calculus[1:5]==Calculus[5:9] and Calculus[0:1]=="0":
+                                                  save_03+="10"
                                                   
                                                     
-                                            save_01=Calculus
+                                            save_01=Calculus[5:]
+                                            save_03+="11"
                                             size_data12=size_data12+save_01
                                             #print(Zero_one_divide_result_second_back)
                                             #print(Zero_one_divide)
@@ -248,7 +249,7 @@ class encypthion_class:
                                     #print(len(size_data2))
                                     
                                     long_Stop=len(size_data12)
-                                    if long_Start<=long_Stop or cout_compress==(2**8)-1 or long_Stop<=320:
+                                    if cout_compress==(2**8)-1 or long_Stop<=22:
                                         count_times_stop=1
                                         
                                    
@@ -258,7 +259,7 @@ class encypthion_class:
                                 cout_compress2=format(cout_compress_long,'024b') 
                                 cout_compress1=format(cout_compress,'08b')
                                 
-                                size_data11="1"+size_data4
+                                size_data11=cout_compress2+save_03+"1"+size_data12
                                 #print(cout_compress1)
                                 
                                 lenf=len(size_data11)
@@ -273,7 +274,7 @@ class encypthion_class:
                                         z=z+1
                                                                         
                                                                         
-                                size_data11=cout_compress2+save_03+cout_compress1+add_bits118+size_data11
+                                size_data11=cout_compress1+add_bits118+size_data11
                                 
                                 
                                 
