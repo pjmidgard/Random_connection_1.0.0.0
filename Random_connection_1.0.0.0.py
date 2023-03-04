@@ -256,15 +256,15 @@ class encypthion_class:
                                     #print(len(size_data2))
                                     
                                     long_Stop=len(size_data12)
-                                    if long_Stop>=long_Start or cout_compress==(2**8)-1 or long_Stop<=22 or cout_compress_long1>(2**14):
+                                    if long_Stop>=long_Start or cout_compress==(2**24)-1 or long_Stop<=22 or cout_compress_long1>(2**44):
                                         count_times_stop=1
                                         
                                    
                                     
                                     
                                 cout_compress_long=len(save_04) 
-                                cout_compress2=format(cout_compress_long,'016b') 
-                                cout_compress1=format(cout_compress,'08b')
+                                cout_compress2=format(cout_compress_long,'048b') 
+                                cout_compress1=format(cout_compress,'024b')
                                 if not_compres_file==0:
                                 	size_data11="10"+cout_compress2+save_04+size_data12
                                 if not_compres_file==1:
