@@ -256,7 +256,7 @@ class encypthion_class:
                                     #print(len(size_data2))
                                     
                                     long_Stop=len(size_data12)
-                                    if long_Stop>=long_Start or cout_compress==(2**8)-1 or long_Stop<=22 or cout_compress_long1>(2**8):
+                                    if long_Stop>=long_Start or cout_compress==(2**8)-1 or long_Stop<=22 or cout_compress_long1>(2**14):
                                         count_times_stop=1
                                         
                                    
