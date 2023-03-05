@@ -263,7 +263,7 @@ class encypthion_class:
                                         
                                         not_compres_file=0
                                         count_times_stop=1
-                                    elif cout_compress_long1>2**30:
+                                    if cout_compress_long1>2**30:
                                         not_compres_file=1
                                         count_times_stop=1
                                         
