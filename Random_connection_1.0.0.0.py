@@ -223,7 +223,7 @@ class encypthion_class:
                                         Zero_one_divide_result_second=Zero_one_divide_result*32
                                         Zero_one_divide_result_second_back=Zero_one_divide_result_second+1
                                           
-                                        if Zero_one_divide_result_second_back==Zero_one_divide and Zero_one_divide_result<2**2:
+                                        if Zero_one_divide_result_second_back==Zero_one_divide and Zero_one_divide_result<2**2 and len(Calculus)==10:
                                             
                                               save_00=format(Zero_one_divide_result,'02b')
                                              
@@ -235,7 +235,7 @@ class encypthion_class:
                                         
                                         
                                         else:
-                                            if   Calculus[0:1]=="0" and Calculus[1:3]==Calculus[3:5] and save_03==Calculus[1:3]:
+                                            if   Calculus[0:1]=="0" and Calculus[1:3]==Calculus[3:5] and save_03==Calculus[1:3] and len(Calculus)==10:
                                             	    save_04+="1"
                                             	    
                                             	    save_03=""
@@ -521,9 +521,14 @@ class encypthion_class:
                                     size_data4=""
                                     save_03=""
                                     save_04=""
+                                    save_06=""
+                                    save_07="" 
                                     cout_compress2=""
                                     Calculus2=""
                                     size_data6=""
+                                    
+                                    block2=0
+                                    blocks2=5
                                     size_data6=size_data2[:1]
                                     if size_data6[0:1]=="0":
                                         size_data2=size_data2[1:]
@@ -537,6 +542,7 @@ class encypthion_class:
                                         
                                     
                                     save_04=size_data2[:cout_compress2]
+                                 
                                     size_data2=size_data2[cout_compress2:]
                                 
                                     size_data4=size_data2
@@ -560,8 +566,6 @@ class encypthion_class:
                                         Calculus=""
                                         
                                         
-                                        block2=0
-                                        blocks2=5
                                         
                                         while block<long:
                                             long=len(size_data2)
@@ -573,16 +577,25 @@ class encypthion_class:
                                             save_00=""
                                             save_01=""
                                             save_02=""
-                                            save_06=""
-                                            save_07=""
+                                           
+                                            
                                             
                                             block+=blocks
 
                                             
                                             
 
-                                            save_06=save_04[block2:block2:block2+1]
-                                            save_07=save_04[block2+1:block2:block2+3]
+                                            save_06=save_04[block2:block2+1]
+                                            save_07=save_04[block2+1:block2+3]
+                                            #print(save_06+save_07)
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                           
                                            
                                               
                                             if   Calculus[0:1]=="0" and Calculus[1:3]==Calculus[3:5] and save_06=="0" and save_07==Calculus[1:3]:
@@ -595,8 +608,12 @@ class encypthion_class:
                                                  
                                                   size_data12=size_data12+save_00
                                                   save_03=save_07
+                                                  
                                                  
                                                   block2+=3
+                                                
+                                                  
+                                                  
                                                   
                                                   
                                                  
@@ -608,11 +625,14 @@ class encypthion_class:
                                                         
                                                         block2+=1
                                                         
+                                                       
+                                                        
                                                         
                                                      
                                                 Calculus2=size_data2[block:block+blocks]      
                                                         
                                                 save_01=Calculus+Calculus2
+                                                
                                                 
                                                 size_data12=size_data12+save_01
                                                 block+=blocks
