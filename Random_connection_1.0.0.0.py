@@ -1,4 +1,4 @@
-from time import time
+Fromm time import time
 cvf=0
 import os
 import binascii
@@ -487,6 +487,7 @@ class encypthion_class:
 
                                     cout_compress1=int(size_data2[0:16],2) 
                                     size_data2=size_data2[16:] 
+                                    size_data7=""
                                     size_data7=size_data2
                                     size_data2=size_data2
                                     
