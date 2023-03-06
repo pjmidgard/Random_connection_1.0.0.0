@@ -521,16 +521,19 @@ class encypthion_class:
                                     save_04=""
                                     cout_compress2=""
                                     Calculus2=""
-
-                                    if size_data2[0:1]=="0":
+                                    size_data6=""
+                                    size_data6=size_data2[:1]
+                                    if size_data6[0:1]=="0":
+                                        size_data2=size_data2[1:]
                                         cout_compress2=int(size_data2[0:32],2)
                                         size_data2=size_data2[32:]
 
-                                    elif size_data2[0:1]=="1":
+                                    elif size_data6[0:1]=="1":
+                                        size_data2=size_data2[1:]
                                         cout_compress2=int(size_data2[0:48],2)
                                         size_data2=size_data2[48:]
                                         
-                                    size_data2=size_data2[1:]
+                                    
                                     save_04=size_data2[:cout_compress2]
                                     size_data2=size_data2[cout_compress2:]
                                 
