@@ -487,25 +487,26 @@ class encypthion_class:
 
                                     cout_compress1=int(size_data2[0:16],2) 
                                     size_data2=size_data2[16:] 
+                                    size_data7=size_data2
                                     size_data2=size_data2
                                     
-                                    if size_data2[0:9]=="000000001":
+                                    if size_data7[0:9]=="000000001":
                                         size_data2=size_data2[9:]
-                                    elif size_data2[0:8]=="00000001":
+                                    elif size_data7[0:8]=="00000001":
                                         size_data2=size_data2[8:]
-                                    elif size_data2[0:7]=="0000001":
+                                    elif size_data7[0:7]=="0000001":
                                         size_data2=size_data2[7:]
-                                    elif size_data2[0:6]=="000001":
+                                    elif size_data7[0:6]=="000001":
                                         size_data2=size_data2[6:]
-                                    elif size_data2[0:5]=="00001":
+                                    elif size_data7[0:5]=="00001":
                                         size_data2=size_data2[5:]
-                                    elif size_data2[0:4]=="0001":
+                                    elif size_data7[0:4]=="0001":
                                         size_data2=size_data2[4:]
-                                    elif size_data2[0:3]=="001":
+                                    elif size_data7[0:3]=="001":
                                         size_data2=size_data2[3:]
-                                    elif size_data2[0:2]=="01":
+                                    elif size_data7[0:2]=="01":
                                         size_data2=size_data2[2:]
-                                    elif size_data2[0:1]=="1":
+                                    elif size_data7[0:1]=="1":
                                         size_data2=size_data2[1:]
 
 
