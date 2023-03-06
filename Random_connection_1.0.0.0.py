@@ -603,7 +603,7 @@ class encypthion_class:
                                             else:
                                                 if   Calculus[0:1]=="0" and Calculus[1:3]==Calculus[3:5] and save_03==Calculus[1:3] and save_06=="1":
                                                         
-                                                        save_03=""
+                                                        
                                                         block2+=1
                                                         
                                                         
