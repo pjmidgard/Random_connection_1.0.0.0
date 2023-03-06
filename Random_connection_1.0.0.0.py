@@ -594,7 +594,7 @@ class encypthion_class:
                                                   size_data12=size_data12+save_00
                                                   save_03=save_07
                                                  
-                                                  block2+=5
+                                                  block2+=3
                                                   
                                                   
                                                  
