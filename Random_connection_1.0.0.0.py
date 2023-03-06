@@ -682,44 +682,7 @@ class encypthion_class:
                                             x2 = time()
                                             x3=x2-x
                                             return print(x3)
-                                        
-                                        
-                                        size_data11=""
-                                        size_data12=""
-                                        size_data11=size_data12
-                                        save_04=""
-                                    
-                                    
-                                
-                                
-                                                                                
-                                    n = int(size_data11, 2)
-                                
-                                    qqwslenf=len(size_data11)
-                                    qqwslenf=(qqwslenf/8)*2
-                                    qqwslenf=str(qqwslenf)
-                                    qqwslenf="%0"+qqwslenf+"x"
-                             
-                                    jl=binascii.unhexlify(qqwslenf % n)
-                                
-                                    size_after=len(jl)
-
-                                    size_after=len(jl)
-                                
-                                   
-                                    qqqwz=qqqwz+1
-                                    szxzzza=""
-                                    szxzs=""
-                            
-                                    assxw=assxw+1
-                                    if assxw==1:
-                                       assx=10
-                                       if assx==10:
-
-                                          f2.write(jl)
-                                          x2 = time()
-                                          x3=x2-x
-                                          return print(x3)
+                                 
 self=""                                
 d=encypthion_class()
     
