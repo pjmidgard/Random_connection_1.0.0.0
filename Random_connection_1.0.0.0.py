@@ -526,7 +526,7 @@ class encypthion_class:
                                         cout_compress2=int(size_data2[0:32],2)
                                         size_data2=size_data2[32:]
 
-                                    if size_data2[0:1]=="1":
+                                    elif size_data2[0:1]=="1":
                                         cout_compress2=int(size_data2[0:48],2)
                                         size_data2=size_data2[48:]
                                         
