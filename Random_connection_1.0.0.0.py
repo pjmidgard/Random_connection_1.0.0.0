@@ -524,9 +524,12 @@ class encypthion_class:
 
                                     if size_data2[0:1]=="0":
                                         cout_compress2=int(size_data2[0:32],2)
+                                        size_data2=size_data2[32:]
 
                                     if size_data2[0:1]=="1":
                                         cout_compress2=int(size_data2[0:48],2)
+                                        size_data2=size_data2[48:]
+                                        
                                     size_data2=size_data2[1:]
                                     save_04=size_data2[:cout_compress2]
                                     size_data2=size_data2[cout_compress2:]
