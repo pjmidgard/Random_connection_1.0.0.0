@@ -1,4 +1,4 @@
-From time import time
+from time import time
 cvf=0
 import os
 import binascii
