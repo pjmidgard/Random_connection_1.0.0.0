@@ -201,8 +201,7 @@ class encypthion_class:
                                     blocks=10
                                     Calculus=""
                                     
-                                    blocks1=9
-                                    block1=0
+                                    
                                     
                                     while block<long:
                                         long=len(size_data2)
@@ -486,34 +485,206 @@ class encypthion_class:
 
                                     Count_add_block=0
 
+                                    cout_compress1=int(size_data2[0:16],2) 
+                                    size_data2=size_data2[16:] 
+                                    size_data2=size_data2
                                     
+                                    if size_data2[0:9]=="000000001":
+                                        size_data2=size_data2[9:]
+                                    elif size_data2[0:8]=="00000001":
+                                        size_data2=size_data2[8:]
+                                    elif size_data2[0:7]=="0000001":
+                                        size_data2=size_data2[7:]
+                                    elif size_data2[0:6]=="000001":
+                                        size_data2=size_data2[6:]
+                                    elif size_data2[0:5]=="00001":
+                                        size_data2=size_data2[5:]
+                                    elif size_data2[0:4]=="0001":
+                                        size_data2=size_data2[4:]
+                                    elif size_data2[0:3]=="001":
+                                        size_data2=size_data2[3:]
+                                    elif size_data2[0:2]=="01":
+                                        size_data2=size_data2[2:]
+                                    elif size_data2[0:1]=="1":
+                                        size_data2=size_data2[1:]
 
-                                    size_data3=size_data2
+
+                                    lenf2=len(size_data2)
+                                    #print(lenf2)
+                                    cout_compress=0
+                                    opssite_equal=1
+                                    count_times_stop=0
+                                    not_compres_file=0
+                                    size_data3=""
+                                    size_data4=""
+                                    save_03=""
+                                    save_04=""
+                                    cout_compress2=""
+                                    Calculus2=""
+
+                                    if size_data2[0:1]=="0":
+                                        cout_compress2=int(size_data2[0:32],2)
+
+                                    if size_data2[0:1]=="1":
+                                        cout_compress2=int(size_data2[0:48],2)
+                                    size_data2=size_data2[1:]
+                                    save_04=size_data2[:cout_compress2]
+                                    size_data2=size_data2[cout_compress2:]
+                                
+                                    size_data4=size_data2
+                                    while cout_compress1!=cout_compress:
+                                        cout_compress+=1
+                                        Stop_compress=0
+                                       
+                                        long_Start=len(size_data2)
+                                        size_data3=size_data2
+                                        size_data2=size_data2[::-1]
+                                        #print(cout_compress)
+                                      
+                                     
+                                        size_data12=""
+                                        Times=""
+
+                                        size_data11=""
+
+                                        block=0
+                                        blocks=5
+                                        Calculus=""
+                                        
+                                        
+                                        block2=0
+                                        blocks2=5
+                                        
+                                        while block<long:
+                                            long=len(size_data2)
+                                            Calculus=size_data2[block:block+blocks]
+                                            Zero_one_divide=0
+                                            Zero_one_divide_result=0
+                                            Zero_one_divide_result_second=0
+                                            Zero_one_divide_result_second_back=0
+                                            save_00=""
+                                            save_01=""
+                                            save_02=""
+                                            save_06=""
+                                            save_07=""
+                                            
+                                            block+=blocks
+
+                                            
+                                            
+
+                                            save_06=save_04[block2:block2:block2+1]
+                                            save_07=save_04[block2+1:block2:block2+3]
+                                           
+                                              
+                                            if   Calculus[0:1]=="0" and Calculus[1:3]==Calculus[3:5] and save_06=="0" and save_07==Calculus[1:3]:
+
+                                                  Zero_one_divide=int(Calculus[1:3],2)
+                                                  Zero_one_divide_result_second=Zero_one_divide*32
+                                                  Zero_one_divide_result_second_back=Zero_one_divide_result_second+1
+                                                
+                                                  save_00=format(Zero_one_divide_result_second_back,'010b')
+                                                 
+                                                  size_data12=size_data12+save_00
+                                                  save_03=save_07
+                                                 
+                                                  block2+=5
+                                                  
+                                                  
+                                                 
+                                            
+                                            
+                                            else:
+                                                if   Calculus[0:1]=="0" and Calculus[1:3]==Calculus[3:5] and save_03==Calculus[1:3] and save_06=="1":
+                                                        
+                                                        save_03=""
+                                                        block2+=1
+                                                        
+                                                        
+                                                     
+                                                Calculus2=size_data2[block:block+blocks]      
+                                                        
+                                                save_01=Calculus+Calculus2
+                                                
+                                                size_data12=size_data12+save_01
+                                                block+=blocks
+                                                #print(Zero_one_divide_result_second_back)
+                                                #print(Zero_one_divide)
+                                                 
+
+                                            
+                                        size_data2=size_data12
+                                        cout_compress_long1=len(save_04) 
+                                        #print(len(size_data2))
+                                        
+                                        long_Stop=len(size_data12)
+                                        
+                                            
+                                            
+                                            
+                                       
+                                        
+                                        
                                     
-                                    if size_data3[0:9]=="000000001":
-                                        size_data3=size_data3[9:]
-                                    elif size_data3[0:8]=="00000001":
-                                        size_data3=size_data3[8:]
-                                    elif size_data3[0:7]=="0000001":
-                                        size_data3=size_data3[7:]
-                                    elif size_data3[0:6]=="000001":
-                                        size_data3=size_data3[6:]
-                                    elif size_data3[0:5]=="00001":
-                                        size_data3=size_data3[5:]
-                                    elif size_data3[0:4]=="0001":
-                                        size_data3=size_data3[4:]
-                                    elif size_data3[0:3]=="001":
-                                        size_data3=size_data3[3:]
-                                    elif size_data3[0:2]=="01":
-                                        size_data3=size_data3[2:]
-                                    elif size_data3[0:1]=="1":
-                                        size_data3=size_data3[1:]
-                                    
-                                    
-                                    
-                                    size_data11=""
-                                    size_data12=""
                                     size_data11=size_data12
+                                    
+                              
+                                    #print(cout_compress1)
+                                    
+                                    lenf=len(size_data11)
+                                                
+                                    add_bits118=""
+                                    count_bits=8-lenf%8
+                                    z=0
+                                            
+                                    if count_bits!=8:
+                                        while z<count_bits:
+                                            add_bits118="0"+add_bits118
+                                            z=z+1
+                                                                            
+                                                                            
+                                    size_data11=add_bits118+size_data11
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    #print(size_data11)
+                                      
+                                   
+                 
+                                                                                    
+                                    n = int(size_data11, 2)
+                                    
+                                    qqwslenf=len(size_data11)
+                                    qqwslenf=(qqwslenf/8)*2
+                                    qqwslenf=str(qqwslenf)
+                                    qqwslenf="%0"+qqwslenf+"x"
+                                 
+                                    jl=binascii.unhexlify(qqwslenf % n)
+                                    
+                                    size_after=len(jl)
+                                    
+                                       
+                                    qqqwz=qqqwz+1
+                                    szxzzza=""
+                                    szxzs=""
+                                
+                                    assxw=assxw+1
+                                    if assxw==1:
+                                        assx=10
+                                        if assx==10:
+
+                                            f2.write(jl)
+                                            x2 = time()
+                                            x3=x2-x
+                                            return print(x3)
+                                        
+                                        
+                                        size_data11=""
+                                        size_data12=""
+                                        size_data11=size_data12
+                                        save_04=""
                                     
                                     
                                 
