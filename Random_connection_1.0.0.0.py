@@ -624,6 +624,7 @@ class encypthion_class:
                                                         
                                                         
                                                         block2+=1
+                                                        save_03=""
                                                         
                                                        
                                                         
