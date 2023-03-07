@@ -552,7 +552,7 @@ class encypthion_class:
                                        
                                         long_Start=len(size_data2)
                                         size_data3=size_data2
-                                        size_data2=size_data2[::-1]
+                                        size_data2=size_data2
                                         #print(cout_compress)
                                       
                                      
@@ -641,7 +641,7 @@ class encypthion_class:
                                                  
 
                                             
-                                        size_data2=size_data12
+                                        size_data2=size_data12[::-1]
                                         cout_compress_long1=len(save_04) 
                                         #print(len(size_data2))
                                         
