@@ -206,6 +206,8 @@ class encypthion_class:
                                     while block<long:
                                         long=len(size_data2)
                                         Calculus=size_data2[block:block+blocks]
+                                        Calculus2=size_data2[block:block+10]
+                                        
                                         Zero_one_divide=0
                                         Zero_one_divide_result=0
                                         Zero_one_divide_result_second=0
@@ -215,7 +217,7 @@ class encypthion_class:
                                         save_02=""
                                         
                                         
-                                        block+=blocks
+                                        
 
                                         
                                         Zero_one_divide=int(Calculus,2)
@@ -227,27 +229,29 @@ class encypthion_class:
                                             
                                               save_00=format(Zero_one_divide_result,'02b')
                                              
-                                              size_data12=size_data12+"0"+save_00+save_00
+                                              size_data12=size_data12+"0"+save_00
                                               save_03=save_00
-                                              save_04+="0"+save_00
+                                              save_04+="0"
+                                              block+=10
                                               
                                              
                                         
                                         
                                         else:
-                                            if   Calculus[0:1]=="0" and Calculus[1:3]==Calculus[3:5] and save_03==Calculus[1:3] and len(Calculus)==10:
-                                            	    save_04+="1"
+                                            
+                                           
                                             	    
-                                            	    save_03=""
+                                            	 
                                             	    
                                             	    
                                             	    
                                                  
                                                   
                                                     
-                                            save_01=Calculus
+                                            save_01="1"+Calculus2
                                             
                                             size_data12=size_data12+save_01
+                                            block+=10
                                             #print(Zero_one_divide_result_second_back)
                                             #print(Zero_one_divide)
                                              
@@ -271,14 +275,8 @@ class encypthion_class:
                                    
                                     
                                     
-                                cout_compress_long=len(save_04) 
-                                cout_compress2=format(cout_compress_long,'032b') 
-                                cout_compress3=format(cout_compress_long,'048b') 
                                 cout_compress1=format(cout_compress,'016b')
-                                if not_compres_file==0:
-                                	size_data11="10"+cout_compress2+save_04+size_data12
-                                elif not_compres_file==1:
-                                	size_data11="11"+cout_compress3+save_04+size_data12
+                                size_data11="1"+size_data12
                           
                                 #print(cout_compress1)
                                 
@@ -529,21 +527,11 @@ class encypthion_class:
                                     
                                     block2=0
                                     blocks2=5
-                                    size_data6=size_data2[:1]
-                                    if size_data6[0:1]=="0":
-                                        size_data2=size_data2[1:]
-                                        cout_compress2=int(size_data2[0:32],2)
-                                        size_data2=size_data2[32:]
-
-                                    elif size_data6[0:1]=="1":
-                                        size_data2=size_data2[1:]
-                                        cout_compress2=int(size_data2[0:48],2)
-                                        size_data2=size_data2[48:]
+                                    
+                                
                                         
                                     
-                                    save_04=size_data2[:cout_compress2]
-                                 
-                                    size_data2=size_data2[cout_compress2:]
+ 
                                 
                                     size_data4=size_data2
                                     while cout_compress1!=cout_compress:
@@ -562,14 +550,15 @@ class encypthion_class:
                                         size_data11=""
 
                                         block=0
-                                        blocks=5
+                                        blocks=10
                                         Calculus=""
                                         
                                         
                                         
                                         while block<long:
                                             long=len(size_data2)
-                                            Calculus=size_data2[block:block+blocks]
+                                            Calculus=size_data2[block:block+11]
+                                            Calculus2=size_data2[block:block+3]
                                             Zero_one_divide=0
                                             Zero_one_divide_result=0
                                             Zero_one_divide_result_second=0
@@ -580,13 +569,13 @@ class encypthion_class:
                                            
                                             
                                             
-                                            block+=blocks
+                                          
 
                                             
                                             
 
                                             save_06=save_04[block2:block2+1]
-                                            save_07=save_04[block2+1:block2+3]
+                                            
                                             #print(save_06+save_07)
                                             
                                             
@@ -598,7 +587,7 @@ class encypthion_class:
                                            
                                            
                                               
-                                            if   Calculus[0:1]=="0" and Calculus[1:3]==Calculus[3:5] and save_06=="0" and save_07==Calculus[1:3]:
+                                            if   Calculus2[0:1]=="0" and len(Calculus2)==3:
 
                                                   Zero_one_divide=int(Calculus[1:3],2)
                                                   Zero_one_divide_result_second=Zero_one_divide*32
@@ -610,7 +599,7 @@ class encypthion_class:
                                                   save_03=save_07
                                                   
                                                  
-                                                  block2+=3
+                                                  block+=3
                                                 
                                                   
                                                   
@@ -620,23 +609,23 @@ class encypthion_class:
                                             
                                             
                                             else:
-                                                if   Calculus[0:1]=="0" and Calculus[1:3]==Calculus[3:5] and save_03==Calculus[1:3] and save_06=="1":
+                                              
                                                         
                                                         
-                                                        block2+=1
-                                                        save_03=""
+                                                block+=11
+                                                      
                                                         
                                                        
                                                         
                                                         
                                                      
-                                                Calculus2=size_data2[block:block+blocks]      
+                                                
                                                         
-                                                save_01=Calculus+Calculus2
+                                                save_01=Calculus[1:]
                                                 
                                                 
                                                 size_data12=size_data12+save_01
-                                                block+=blocks
+                                             
                                                 #print(Zero_one_divide_result_second_back)
                                                 #print(Zero_one_divide)
                                                  
